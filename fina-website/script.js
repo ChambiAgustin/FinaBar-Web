@@ -124,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // Create Navigation Buttons (One per Group)
+                let isScrollingByClick = false;
+
+                // Category Navigation Click Handler
                 if (categoryNav) {
                     // Sort by explicit order
                     const sortedKeys = Object.keys(groups).sort((a, b) => {
@@ -134,13 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     sortedKeys.forEach((parentName, index) => {
+                        const groupId = `group-${index}`;
                         const btn = document.createElement('button');
                         btn.className = 'cat-btn';
                         btn.textContent = parentName;
-                        const groupId = `group-${index}`;
                         btn.dataset.target = groupId;
 
                         btn.addEventListener('click', () => {
+                            isScrollingByClick = true; // Lock observer updates
+                            
+                            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                            
+                            // Center horizontally in the nav
+                            const navContainer = document.getElementById('category-nav');
+                            if (navContainer) {
+                                const btnRect = btn.getBoundingClientRect();
+                                const navRect = navContainer.getBoundingClientRect();
+                                navContainer.scrollBy({
+                                    left: btnRect.left - navRect.left - (navRect.width / 2) + (btnRect.width / 2),
+                                    behavior: 'smooth'
+                                });
+                            }
+
                             // Smooth scroll to the group
                             const targetEl = document.getElementById(groupId);
                             if (targetEl) {
@@ -156,6 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     top: offsetPosition,
                                     behavior: 'smooth'
                                 });
+
+                                // Unlock observer updates after scrolling finishes
+                                setTimeout(() => {
+                                    isScrollingByClick = false;
+                                }, 800); // 800ms covers the smooth scroll duration
                             }
                         });
 
@@ -269,11 +292,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Scroll Spy for Category Navigation
                 const spyOptions = {
                     root: null,
-                    rootMargin: '-20% 0px -80% 0px', // Adjusted to trigger closer to the top
+                    rootMargin: '-20% 0px -40% 0px', // Wider detection zone to catch fast scrolling
                     threshold: 0
                 };
                 
                 const spyObserver = new IntersectionObserver((entries) => {
+                    if (isScrollingByClick) return; // Prevent observer from reacting during smooth scrolls
+
                     let activeId = null;
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {

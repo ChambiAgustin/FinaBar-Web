@@ -45,7 +45,7 @@ html {
 body::before,
 body::after {
     content: '';
-    position: absolute;
+    position: fixed; /* Changed from absolute to prevent horizontal overflow */
     width: 600px;
     height: 600px;
     border-radius: 50%;
@@ -91,6 +91,7 @@ a {
     align-items: center;
     background: rgba(20, 20, 20, 0.95);
     /* Using Brand Black */
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(173, 152, 85, 0.2);
@@ -172,6 +173,7 @@ a {
 
 /* Hero Section */
 .hero {
+    height: 100vh;
     height: 100dvh;
     /* Dynamic Viewport Height for mobile browsers */
     display: flex;
@@ -1429,11 +1431,10 @@ footer {
     background: rgba(2, 26, 20, 0.98);
     /* More opaque */
     backdrop-filter: blur(10px);
+    position: -webkit-sticky; /* For Safari/Samsung */
     position: sticky;
-    top: 0;
-    /* Sticks to the very top */
-    z-index: 2000;
-    /* Higher than other elements */
+    top: 0; /* Sticks to the very top, covering the navbar on scroll */
+    z-index: 2000; /* Higher than navbar to become the primary header header */
     margin-bottom: 40px;
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
