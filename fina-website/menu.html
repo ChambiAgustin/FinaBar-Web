@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#052b22">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description"
+        content="Carta completa de Fina Cocktail Bar. Coctelería de autor, vinos seleccionados y platos exclusivos.">
+    <title>Carta | FINA Cocktail Bar</title>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carta Digital | FINA Cocktail Bar">
+    <meta property="og:description"
+        content="Descubrí nuestra coctelería de autor y platos exclusivos. Una experiencia fina en Río Cuarto.">
+    <meta property="og:image" content="https://fina-bar.com/images/Aperol%20Spritz.jpg">
+    <!-- Reemplazar con URL real final -->
+    <meta property="og:url" content="https://fina-bar.com/menu.html">
+    
+    <!-- PWA Setup & Fonts Preload -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="menu-page">
+
+    <!-- Navigation (Simplified) -->
+    <nav class="navbar menu-navbar">
+        <a href="index.html" class="logo-small" style="text-decoration: none; color: var(--accent-gold);">FINA</a>
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="menu.html" class="mobile-nav-link active">
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                    <span>Carta</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="https://wa.me/5493585142160" target="_blank" class="mobile-nav-link whatsapp-link">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <span>WhatsApp</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Menu Header -->
+    <header class="menu-header">
+        <h1 class="neon-title">Nuestra Carta</h1>
+
+        <!-- Search & Filter Section -->
+        <div class="search-filter-container">
+            <div class="search-box">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" id="menu-search" placeholder="Buscá tu trago o plato...">
+            </div>
+
+            <div class="filter-chips">
+                <button class="chip active" data-filter="all">Todos</button>
+                <button class="chip" data-filter="dulces">Dulces</button>
+                <button class="chip" data-filter="herbales">Herbales</button>
+                <button class="chip" data-filter="citricos">Cítricos</button>
+                <button class="chip" data-filter="secos">Secos</button>
+                <button class="chip" data-filter="amargo">Amargos</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav id="category-nav" class="category-nav">
+        <!-- Back to Home Button -->
+        <a href="index.html" class="cat-btn back-home-btn" aria-label="Volver al Inicio">
+            <ion-icon name="arrow-back"></ion-icon>
+        </a>
+        <!-- Categories injected by JS -->
+    </nav>
+
+    <!-- Menu Container -->
+    <section class="menu-section full-page-menu">
+        <div id="menu-container">
+            <!-- Content rendered by script.js -->
+        </div>
+    </section>
+
+    <!-- Spotify Floating Button -->
+    <a href="https://open.spotify.com/playlist/4Q3wBJmUKFRTv3OoUbJhDI" class="spotify-btn" target="_blank"
+        aria-label="Listen on Spotify">
+        <ion-icon name="musical-notes"></ion-icon>
+        <div class="spotify-wave"></div>
+        <span class="spotify-tooltip">Nuestra Playlist</span>
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493585142160" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <span class="whatsapp-tooltip">¡Reservá tu mesa!</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
+    <!-- Quiz Floating Button -->
+    <a href="quiz.html" id="quiz-fab" class="quiz-fab" aria-label="Tu Trago Ideal">
+        <ion-icon name="sparkles"></ion-icon>
+        <span>¿Tu Trago Ideal?</span>
+    </a>
+
+    <!-- HTML for Modal Removed as we now have a dedicated page -->
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Payment Info Banner -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="payment-banner">
+            <div class="payment-content">
+                <ion-icon name="wallet-outline"></ion-icon>
+                <span>Aceptamos todos los medios de pago</span>
+            </div>
+            <div class="payment-icons" style="display: flex; gap: 10px; font-size: 1.8rem;">
+                <ion-icon name="card-outline" title="Tarjetas de Crédito y Débito"></ion-icon>
+                <ion-icon name="phone-portrait-outline" title="MercadoPago y Transferencias"></ion-icon>
+                <ion-icon name="cash-outline" title="Efectivo"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FINA Cocktail Bar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2056 @@
+[
+    {
+        "parent": "Cócteles",
+        "category": "Cocktelería de Autor",
+        "items": [
+            {
+                "name": "Golden Boulevard",
+                "price": "$9000",
+                "desc": "Whisky bourbon, vermut rosso y licor fino de cerezas.",
+                "tags": [
+                    "bebida",
+                    "secos",
+                    "fuerte",
+                    "autor"
+                ],
+                "history": "Inspirado en los lujos del Boulevardier clásico de los años 20, con un giro frutal y sofisticado.",
+                "pairing": "Ideal para saborear junto a la Tabla de Quesos o una Provoleta."
+            },
+            {
+                "name": "Luna de Otoño",
+                "price": "$7000",
+                "desc": "Ron especial, almíbar, jugo de naranja, licor de flor de sauco y angostura.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "citricos",
+                    "frutal",
+                    "equilibrado",
+                    "autor"
+                ],
+                "history": "Nacido para evocar los atardeceres frescos, combinando la calidez del ron con el perfume floral del sauco.",
+                "pairing": "Excelente acompañamiento para los Tacos de pollo o unos Bastones de mozzarella."
+            },
+            {
+                "name": "La Havana Angosta",
+                "price": "$7500",
+                "desc": "Ron Habana, jugo de ananá, jugo de naranja, granadina.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "citricos",
+                    "frutal",
+                    "autor"
+                ],
+                "history": "Inspirado en los vibrantes colores de los atardeceres caribeños, aportando el dulzor exacto para refrescar la noche.",
+                "pairing": "Sus tonos frutales contrastan de 10 con la intensidad salada de los Tacos de birria o las Papas con Cheddar."
+            },
+            {
+                "name": "Crazy Quince",
+                "price": "$7500",
+                "desc": "Gin de membrillo, jugo de pomelo, almíbar y soda.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "equilibrado",
+                    "autor"
+                ],
+                "history": "La mezcla audaz del membrillo destilado con cítricos crea un perfil nostálgico pero sumamente novedoso.",
+                "pairing": "Armoniza brillantemente con unas Empanadas Capresse o platos ligeros como la Ensalada Caesar."
+            },
+            {
+                "name": "Gaucho Martin Fierro",
+                "price": "$7500",
+                "desc": "Gin, jugo de limón, almíbar, licor strega, cold brew de yerba mate.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "equilibrado",
+                    "amargo",
+                    "autor"
+                ],
+                "history": "Un homenaje a nuestras raíces: el amargor estimulante de la yerba mate se une a la complejidad herbal del gin y el strega.",
+                "pairing": "Perfecto para cortar la riqueza de un Lomo Clásico o unas Empanadas de Carne."
+            },
+            {
+                "name": "Candy Irish",
+                "price": "$9000",
+                "desc": "Whisky Irlandés, shrub de frutilla, jugo de pomelo.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "frutal",
+                    "autor"
+                ],
+                "history": "Un acercamiento amigable y frutal al exquisito carácter del buen whisky de origen irlandés.",
+                "pairing": "Maridaje natural para la untuosidad de una Cheese Burguer o unos Tacos de pollo."
+            },
+            {
+                "name": "Caprichosa",
+                "price": "$7500",
+                "desc": "Grapa, almíbar de miel, jugo de limón y albúmina.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "citricos",
+                    "amargo",
+                    "fuerte",
+                    "autor"
+                ],
+                "history": "Una deconstrucción elegante de los licores tradicionales italianos, con una sedosidad única aportada por la albúmina.",
+                "pairing": "Ideal para acompañar las notas fuertes y asadas de nuestro Lomo Clásico o Roast Beef Sandwich."
+            }
+        ]
+    },
+    {
+        "parent": "Cócteles",
+        "category": "Cocktelería Clásica",
+        "items": [
+            {
+                "name": "Southside",
+                "price": "$8000",
+                "desc": "Gin Beefeater dry, cordial de lima, almíbar y Menta.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "citricos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "Se rumorea que era el cóctel favorito de Al Capone, preparado por la mafia del 'South Side' de Chicago durante la Ley Seca.",
+                "pairing": "Sus notas de menta y lima limpian el paladar hermosamente tras comer unas Rabas o Tacos de pollo."
+            },
+            {
+                "name": "Dry Martini",
+                "price": "$8500",
+                "desc": "Gin Beefeater dry y vermouth dry.",
+                "tags": [
+                    "bebida",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "Comenzó a gestarse en Nueva York a finales del s. XIX. El cóctel rey, elegante y profundamente seco.",
+                "pairing": "El compañero histórico de la Tabla de Mar o unos quesos duros de la Tabla de Quesos."
+            },
+            {
+                "name": "Tom Collins",
+                "price": "$7000",
+                "desc": "Gin, almíbar simple, Jugo de limon, agua con gas.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "Bautizado así por el popular engaño neoyorquino de 1874 'The Great Tom Collins Hoax'. Clásico e inmensamente refrescante.",
+                "pairing": "Es un aperitivo fantástico. Acompáñalo con nuestra Tortilla Babé o Ensalada Caesar."
+            },
+            {
+                "name": "Blue Margarita",
+                "price": "$8500",
+                "desc": "Tequila Jose Cuervo, triple sec, almibar, limon y blue curacao.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "dulces",
+                    "frutal"
+                ],
+                "history": "Una variante vistosa de la clásica Margarita (creada en México en los 30s), cambiando el licor de naranja por el vibrante Blue Curaçao.",
+                "pairing": "La acidez del tequila y la frescura del limón cortan el picante de las Papas Bravas o los Tacos de birria."
+            },
+            {
+                "name": "Fernet Branca",
+                "price": "$6000",
+                "desc": "Fernet Branca y cola.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "equilibrado",
+                    "fuerte",
+                    "dulces"
+                ],
+                "history": "El amaro creado en Milán en 1845. El 'Fernet con Coca' es un ícono cultural innegable de córdoba y de este bar.",
+                "pairing": "No hay nada mejor que disfrutarlo con un Lomo Clásico o un abundante Roast Beef Sandwich."
+            },
+            {
+                "name": "Negroni",
+                "price": "$8500",
+                "desc": "Gin Beefeater dry, vermut rosso y campari.",
+                "tags": [
+                    "bebida",
+                    "amargo",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "Creado en Florencia hacia 1919 cuando el Conde Negroni pidió fortificar su Americano con gin. Un clásico de aperitivo.",
+                "pairing": "La opción por excelencia para iniciar junto a una Tabla de Fiambres o una Provoleta fundida."
+            },
+            {
+                "name": "Gin Tonic",
+                "price": "$7000",
+                "desc": "Gin y tónica.",
+                "tags": [
+                    "bebida",
+                    "secos",
+                    "citricos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "Nacido en la India del siglo XIX como remedio contra la malaria, combinando quinina (tónica) con gin.",
+                "pairing": "Por su perfil refrescante, acompaña perfecto nuestras Rabas o la Tabla de Mar."
+            },
+            {
+                "name": "Secreto del Eden",
+                "price": "$8500",
+                "desc": "Vodka, almíbar de albahaca, te Matcha y licor de pistacchio.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "equilibrado"
+                ],
+                "history": "Un perfil botánico moderno que fusiona la frescura verde de la albahaca con las notas tostadas del pistacho.",
+                "pairing": "Sus tonos herbales son espectaculares junto a una Ensalada Caesar o unas generosas Rabas."
+            },
+            {
+                "name": "Garibaldi",
+                "price": "$6000",
+                "desc": "Campari, soda o jugo.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "amargo"
+                ],
+                "history": "Nombrado en honor al héroe de la unificación italiana, combina el amargo del norte (Milán) con las naranjas del sur.",
+                "pairing": "Un aperitivo ligero que resalta mágicamente con las notas grasas de la Provoleta o una Tortilla Babé."
+            },
+            {
+                "name": "Mojito",
+                "price": "$8000",
+                "desc": "Ron, jugo de limón, almíbar simple, hojas de menta y trozos de lima.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "citricos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "Originario de Cuba, evolucionó de una bebida del siglo XVI llamada 'El Draque'. Fresco por excelencia.",
+                "pairing": "Recomendamos pedirlo junto a los Tacos de pollo o unas Empanadas Capresse."
+            },
+            {
+                "name": "Hurricane",
+                "price": "$7000",
+                "desc": "Ron blanco, jugo naranja, granadina y limón.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "citricos",
+                    "frutal"
+                ],
+                "history": "Creado en el bar Pat O'Brien's de Nueva Orleans en los 40s para deshacerse del excedente de ron. Fuerte, dulce y legendario.",
+                "pairing": "Por su perfil caribeño, es excepcional con unos dorados Bastones de mozzarella o las Papas con Cheddar."
+            },
+            {
+                "name": "Aperol Spritz",
+                "price": "$8000",
+                "desc": "Aperol, espumante y soda.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "secos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "De origen veneciano. El término 'spritz' nace de los soldados austro-húngaros que 'salpicaban' agua en el vino.",
+                "pairing": "El aperitivo definitivo. Ideal para abrir el apetito con una Tabla de Quesos o Tortilla Babé."
+            },
+            {
+                "name": "White Hunky Punky",
+                "price": "$9000",
+                "desc": "Whisky Wild Turkey, vermut bianco, Fernet Chola.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "Un elegante giro del clásico Hanky Panky que Ada Coleman creó en el Savoy de Londres, pero usando notas rubias y secas.",
+                "pairing": "Su retrogusto amargo combina sutilmente con una Tabla de Quesos maduros o un Lomo Clásico."
+            },
+            {
+                "name": "Rosso",
+                "price": "$6000",
+                "desc": "vermut rosso y soda.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "El aperitivo más simple y honrado que existe. Evoca las típicas tardes de vermut en las cantinas italianas.",
+                "pairing": "Pedilo sin pensarlo con una abundante Tabla de Fiambres o unas rústicas Papas Bravas."
+            },
+            {
+                "name": "Cynar Julep",
+                "price": "$6000",
+                "desc": "Cynar, jugo de pomelo, limon, almibar y menta.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "citricos",
+                    "fuerte",
+                    "amargo"
+                ],
+                "history": "Una variante argentina por excelencia del Mint Julep estadounidense; herbal, terroso y con la acidez perfecta.",
+                "pairing": "Corta la grasa mágicamente, convirtiéndolo en el aliado perfecto para la Hamburguesa Azul o un Roast Beef Sandwich."
+            },
+            {
+                "name": "Old Fashioned",
+                "price": "$9000",
+                "desc": "Whisky Jim Beam, almíbar, azúcar y dash bitter.",
+                "tags": [
+                    "bebida",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "La definición misma de 'cóctel': destilado, azúcar, agua y bitters. Un clásico inamovible.",
+                "pairing": "Excelente contraste para carnes intensas como nuestro Roast Beef Sandwich o Lomo Clásico."
+            },
+            {
+                "name": "Penicilin Highball",
+                "price": "$7500",
+                "desc": "Penicilin, soda.",
+                "tags": [
+                    "bebida",
+                    "secos",
+                    "equilibrado",
+                    "fuerte",
+                    "amargo"
+                ],
+                "history": "Un giro espumoso al clásico moderno Penicillin (creado en 2005), donde el ahumado del scotch es refrescado por las burbujas.",
+                "pairing": "Sus notas ahumadas encajan espectacularmente bien con una Provoleta fundida o el Roast Beef Sandwich."
+            },
+            {
+                "name": "Vecchio Highball",
+                "price": "$9000",
+                "desc": "Licor Vecchio, Ginger Beer.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "equilibrado",
+                    "fuerte",
+                    "amargo"
+                ],
+                "history": "La mezcla de la complejidad herbal del Amaro y el picante de la cerveza de jengibre es la cumbre del refresco digestivo.",
+                "pairing": "Excelente elección para acompañar sabores complejos como los de la Tabla de Fiambres o nuestra provoleta."
+            },
+            {
+                "name": "Falso Jagger",
+                "price": "$8000",
+                "desc": "Ginebra, Amargo Obrero, Pineral, jugo de naranja.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "fuerte",
+                    "amargo"
+                ],
+                "history": "Un homenaje a los aperitivos nacionales. Combina botánicos populares para emular el famoso licor alemán, con sello 100% argentino.",
+                "pairing": "Pedilo como un excelente bajativo de unas Empanadas de Carne o un Lomo Clásico."
+            },
+            {
+                "name": "Segundo Intento",
+                "price": "$8000",
+                "desc": "Gin, Campari, Punt E Mes, jugo de pomelo",
+                "tags": [
+                    "bebida",
+                    "amargo",
+                    "citricos",
+                    "secos",
+                    "fuerte"
+                ],
+                "history": "Una variante seca y muy adulta del clásico Boulevardier. Aporta acidez y un perfil extremadamente seco al trago.",
+                "pairing": "Elegilo siempre junto a Sabores de mar como nuestras Rabas o cortes grasos como una buena Tabla de Quesos."
+            },
+            {
+                "name": "Whisky sours",
+                "price": "$8500",
+                "desc": "whisky escocés, limón, almíbar albúmina.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "suave",
+                    "dulces",
+                    "frutal"
+                ],
+                "history": "Mencionado por primera vez en 1870, es la definición perfecta de equilibrio entre el alcohol destilado, cítrico y dulzor.",
+                "pairing": "Su untuosidad gracias a la albúmina se funde perfecto con la jugosidad de la Hamburguesa Azul."
+            },
+            {
+                "name": "Branca Smash",
+                "price": "$7500",
+                "desc": "Fernet, jugo de ananá, almibar.",
+                "tags": [
+                    "bebida",
+                    "herbales",
+                    "dulces",
+                    "equilibrado",
+                    "fuerte",
+                    "amargo"
+                ],
+                "history": "Una variante genial y exótica. La clásica receta de los 'Smash' (destilado + fruta dulce + hielo), donde el ananá saca todo lo mejor del Fernet.",
+                "pairing": "Por sus notas tropicales y terrosas, hace una dupla mortal con los Tacos de pollo o una potente Cheese Burguer."
+            },
+            {
+                "name": "Moscow Mule",
+                "price": "$9000",
+                "desc": "vodka, ginger Beer, limón y almibar.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "suave",
+                    "equilibrado"
+                ],
+                "history": "Nacido en 1941 para popularizar el vodka y la cerveza de jengibre en EE.UU., tradicionalmente servido en taza de cobre.",
+                "pairing": "Su toque picante y cítrico va increíble con la Hamburguesa Azul o unos Tacos de birria."
+            }
+        ]
+    },
+    {
+        "parent": "Cócteles",
+        "category": "Tikis",
+        "items": [
+            {
+                "name": "El Cesar",
+                "price": "$12000",
+                "desc": "Licuado de banana caramelizada y kiwi, almibar, jugo de naranja, cachaza y jugo de pomelo.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "frutal",
+                    "suave",
+                    "autor"
+                ],
+                "history": "Un tiki vibrante inspirado en sabores tropicales e indulgentes, con una textura sedosa espectacular.",
+                "pairing": "Combina increíblemente con unos Bastones de mozzarella o unas Rabas crujientes."
+            },
+            {
+                "name": "Cobá",
+                "price": "$12000",
+                "desc": "Ron, Triple Sec, Jugo de Limón y Horchata de Almendras.",
+                "tags": [
+                    "bebida",
+                    "citricos",
+                    "dulces",
+                    "frutal",
+                    "equilibrado",
+                    "autor"
+                ],
+                "history": "El nombre hace honor a la antigua pirámide Maya. Es un Mai Tai reversionado, almendrado y potente.",
+                "pairing": "Va a la perfección con la intensidad de los Tacos de birria o la frescura de la Ensalada Caesar."
+            },
+            {
+                "name": "Pinky Cerebro",
+                "price": "$12000",
+                "desc": "Ron especial, horchata de almendras, Ramazzotti, almíbar, jugo de pomelo.",
+                "tags": [
+                    "bebida",
+                    "dulces",
+                    "frutal",
+                    "equilibrado",
+                    "autor"
+                ]
+            },
+            {
+                "name": "Hot Chilli",
+                "price": "$12000",
+                "desc": "Pisco en ají, pineral, jugo de pomelo, aperol, almíbar simple.",
+                "tags": [
+                    "bebida",
+                    "picante",
+                    "fuerte",
+                    "amargo",
+                    "autor"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Para Picotear",
+        "items": [
+            {
+                "name": "Tortilla Babé",
+                "price": "$9000",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "sin-tacc"
+                ],
+                "history": "El clásico bodegón español traído a Fina. Su centro jugoso (babé) es lo que la hace especial.",
+                "pairing": "Maridaje perfecto para un Aperol Spritz fresco o un Tom Collins."
+            },
+            {
+                "name": "Bastón de mozzarella",
+                "price": "$9000",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ]
+            },
+            {
+                "name": "Papas Bravas",
+                "price": "$9000",
+                "desc": "En finas hierbas y emulsión de ajo asado.",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "vegetariano"
+                ],
+                "pairing": "Acompáñalas con una refrescante Blue Margarita o un Gin Tonic clásico."
+            },
+            {
+                "name": "Papas con Cheddar",
+                "price": "$9000",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ]
+            },
+            {
+                "name": "Empanadas Capresse",
+                "price": "$2500",
+                "desc": "Tomate asada, mozzarella y albahaca",
+                "tags": [
+                    "comida",
+                    "vegetariano"
+                ],
+                "pairing": "El maridaje herbal ideal para un Mojito o nuestro Crazy Quince."
+            },
+            {
+                "name": "Empanada de Carne",
+                "price": "$2500",
+                "desc": "Salada",
+                "tags": [
+                    "comida"
+                ],
+                "pairing": "La dupla perfecta del Fernet Branca o el Gaucho Martin Fierro."
+            },
+            {
+                "name": "Provoleta",
+                "price": "$11000",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "sin-tacc"
+                ],
+                "pairing": "Funde de maravilla con un Golden Boulevard o un fuerte Negroni."
+            },
+            {
+                "name": "Rabas",
+                "price": "$13000",
+                "desc": "Salsa tartara",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ],
+                "pairing": "Con un Gin Tonic o un Southside, el contraste es imbatible."
+            },
+            {
+                "name": "Tacos de birria",
+                "price": "$13000",
+                "desc": "Carne de res con parmesano, salsa pico de gallo",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ],
+                "pairing": "Llevan gran intensidad; rebájalos con un Moscow Mule o una Blue Margarita."
+            },
+            {
+                "name": "Tacos de pollo",
+                "price": "$13000",
+                "desc": "Pollo rebozado, hojas verdes, guacamole",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ],
+                "pairing": "Armonizan perfectamente con la frescura del Mojito o un Luna de Otoño."
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Para Compartir",
+        "items": [
+            {
+                "name": "Tabla de Fiambres",
+                "price": "$13000",
+                "desc": "Jamón crudo, jamón cocido, salamin, bondiola y escabeche de porotos.",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "sin-tacc"
+                ],
+                "pairing": "La fiel compañera de un Negroni aperitivo o nuestro Golden Boulevard."
+            },
+            {
+                "name": "Tabla de Quesos",
+                "price": "$11000",
+                "desc": "Queso sardo, pategrás, gouda, pepato, parmesano, roquefort e higos en almibar.",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "sin-tacc",
+                    "vegetariano"
+                ],
+                "pairing": "Potenciá tus quesos con un Dry Martini, o cortá la grasa con un fresco Aperol Spritz."
+            },
+            {
+                "name": "Tabla de Mar",
+                "price": "$22000",
+                "desc": "Rabas rebozadas en panko, langostinos al ajillo, bastones de merluza, salsa de mariscos y salsa tartara",
+                "tags": [
+                    "comida",
+                    "tapeo"
+                ],
+                "pairing": "Maridaje natural para los botánicos secos de un Gin Tonic o un Dry Martini."
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Platos Principales",
+        "items": [
+            {
+                "name": "Cheese Burguer",
+                "price": "$16500",
+                "desc": "Doble medallón, doble cheddar, salsa bacon, salsa relish, tomate y lechuga.",
+                "tags": [
+                    "comida"
+                ],
+                "pairing": "Pide a gritos una Heineken Tirada o el dulzor de nuestro Candy Irish."
+            },
+            {
+                "name": "Hamburguesa Azul",
+                "price": "$16500",
+                "desc": "Doble medallón, queso tybo, queso azul, champiñones, rucula, tomates y alioli.",
+                "tags": [
+                    "comida"
+                ],
+                "pairing": "Su queso azul empata majestuosamente con un Moscow Mule cítrico."
+            },
+            {
+                "name": "Lomo Clásico",
+                "price": "$18500",
+                "desc": "Bife le lomo, alioli, jamón, queso, lechuga, tomate y huevo.",
+                "tags": [
+                    "comida"
+                ],
+                "pairing": "Un clásico necesita otro: Old Fashioned o un gran vaso de Fernet Branca."
+            },
+            {
+                "name": "Roast Beef Sandwich",
+                "price": "$18500",
+                "desc": "Roast Beef desmechado, verduras, queso provolone gratinado, Chimichurri y mayonesa de ajo.",
+                "tags": [
+                    "comida"
+                ],
+                "pairing": "El compañero ideal de un Caprichosa o un buen Fernet bien servido."
+            },
+            {
+                "name": "Ensalada Caesar",
+                "price": "$12000",
+                "desc": "Lechuga, cherrys, crutones, pollo, parmesano, salsa Caeser, hojas verdes",
+                "tags": [
+                    "comida",
+                    "sin-tacc"
+                ],
+                "pairing": "Por su frescura, es el maridaje ideal para un Cobá o un Tom Collins."
+            },
+            {
+                "name": "Ensalada Mariscona",
+                "price": "$12000",
+                "desc": "Langostinos, kanikama, jengibre, oliva, hojas verdes.",
+                "tags": [
+                    "comida",
+                    "sin-tacc"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Platos Vegetarianos",
+        "items": [
+            {
+                "name": "Hamburguesa Vegana",
+                "price": "$12500",
+                "desc": "Medallón de legumbres, emulsión de remolacha y rúcula con papas fritas.",
+                "tags": [
+                    "comida",
+                    "vegetariano"
+                ]
+            },
+            {
+                "name": "Falafel",
+                "price": "$7000",
+                "desc": "Croquetas de garbanzos, acompañado con hummus de remolacha.",
+                "tags": [
+                    "comida",
+                    "vegetariano"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Platos Sin TACC",
+        "items": [
+            {
+                "name": "Tarta",
+                "price": "$14500",
+                "tags": [
+                    "comida",
+                    "sin-tacc"
+                ]
+            },
+            {
+                "name": "Empanadas",
+                "price": "$3500",
+                "desc": "por unidad",
+                "tags": [
+                    "comida",
+                    "sin-tacc"
+                ]
+            },
+            {
+                "name": "Tabla de Fiambres con pan SIN TACC",
+                "price": "$14000",
+                "tags": [
+                    "comida",
+                    "tapeo",
+                    "sin-tacc"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Comida",
+        "category": "Postres",
+        "items": [
+            {
+                "name": "Consultar",
+                "price": "$6000",
+                "tags": [
+                    "comida",
+                    "postre"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Medidas",
+        "category": "Medidas: Gin's",
+        "items": [
+            {
+                "name": "Beefeater Dry",
+                "price": "$5000",
+                "desc": "London Dry, Blood, Pink",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Bombay",
+                "price": "$6000",
+                "desc": "London Dry, Raspberry",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "La Mignon",
+                "price": "$4000",
+                "desc": "Original, Mediterranean Blue",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Hendricks",
+                "price": "$8000",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Malaria",
+                "price": "$6500",
+                "desc": "London Dry, Original, Black",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Monkey",
+                "price": "$12000",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Nórdico",
+                "price": "$3500",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Tanqueray",
+                "price": "$7000",
+                "desc": "London Dry, Royale y Sevilla",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            },
+            {
+                "name": "Llave Dry Gin",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "gin"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Medidas",
+        "category": "Medidas: Whisky",
+        "items": [
+            {
+                "name": "Johnnie Walker Red Label",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Johnnie Walker Black Label",
+                "price": "$10000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Johnnie Walker Double Black",
+                "price": "$10000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Johnnie Walker Green Label",
+                "price": "$25000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Johnnie Walker Blue Label",
+                "price": "$60000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Chivas Regal 12",
+                "price": "$8000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Singleton 12 años",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Singleton 15 años",
+                "price": "$17000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "J y B",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "White Horse",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Jim Beam All Varieties",
+                "price": "$7000",
+                "desc": "Kentucky Straight, Black age",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Jim Beam Black",
+                "price": "$12000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Bulleit Bourbon",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Jack Daniel´s No 7",
+                "price": "$8000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Jameson Triple Destilado",
+                "price": "$7500",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            },
+            {
+                "name": "Nikka Single Malt Yoichi",
+                "price": "$80000",
+                "tags": [
+                    "bebida",
+                    "whisky"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Medidas",
+        "category": "Medidas: Ron & Vodka & Pisco",
+        "items": [
+            {
+                "name": "Havana 3 años, especial",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "ron"
+                ]
+            },
+            {
+                "name": "Havana 7 años",
+                "price": "$9000",
+                "tags": [
+                    "bebida",
+                    "ron"
+                ]
+            },
+            {
+                "name": "Bacardi",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "ron"
+                ]
+            },
+            {
+                "name": "Mandatario",
+                "price": "$18000",
+                "tags": [
+                    "bebida",
+                    "ron"
+                ]
+            },
+            {
+                "name": "Absolut",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "vodka"
+                ]
+            },
+            {
+                "name": "Smirnoff",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "vodka"
+                ]
+            },
+            {
+                "name": "Sernova",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "vodka"
+                ]
+            },
+            {
+                "name": "14 Inkas",
+                "price": "$18000",
+                "tags": [
+                    "bebida",
+                    "vodka"
+                ]
+            },
+            {
+                "name": "Capel",
+                "price": "$6000",
+                "tags": [
+                    "bebida",
+                    "pisco"
+                ]
+            },
+            {
+                "name": "Ocucaje",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "pisco"
+                ]
+            },
+            {
+                "name": "Huamani Quebranta",
+                "price": "$12000",
+                "tags": [
+                    "bebida",
+                    "pisco"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Medidas",
+        "category": "Aperitivos, Vermut & Licores",
+        "items": [
+            {
+                "name": "Amargo Obrero",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "aperitivo"
+                ]
+            },
+            {
+                "name": "Pineral",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "aperitivo"
+                ]
+            },
+            {
+                "name": "Ramazzotti",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "aperitivo"
+                ]
+            },
+            {
+                "name": "Fernet Branca",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "aperitivo"
+                ]
+            },
+            {
+                "name": "Antica Fórmula",
+                "price": "$12000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "La Fuerza",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Giovannoni",
+                "price": "$6000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Carpano",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Cinzano",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Martini",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Punt E Mes",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "vermut"
+                ]
+            },
+            {
+                "name": "Jagermeister",
+                "price": "$6500",
+                "tags": [
+                    "bebida",
+                    "licor"
+                ]
+            },
+            {
+                "name": "Baileys",
+                "price": "$7500",
+                "tags": [
+                    "bebida",
+                    "licor"
+                ]
+            },
+            {
+                "name": "Sheridan´s",
+                "price": "$9000",
+                "tags": [
+                    "bebida",
+                    "licor"
+                ]
+            },
+            {
+                "name": "Amarula",
+                "price": "$8000",
+                "tags": [
+                    "bebida",
+                    "licor"
+                ]
+            },
+            {
+                "name": "Jose Cuervo",
+                "price": "$6000",
+                "tags": [
+                    "bebida",
+                    "tequila"
+                ]
+            },
+            {
+                "name": "1921 Tequila",
+                "price": "$20000",
+                "tags": [
+                    "bebida",
+                    "tequila"
+                ]
+            },
+            {
+                "name": "Esperanto Seleccion",
+                "price": "$20000",
+                "tags": [
+                    "bebida",
+                    "tequila"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Bebidas",
+        "category": "Cervezas",
+        "items": [
+            {
+                "name": "Amstel Lager",
+                "price": "$4200",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Blue moon",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Miller",
+                "price": "$4200",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Grolsch",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Grolsch Ipa",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Golden",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Ipa",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Apa",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Roja",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Stout",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Imperial Lager",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Heineken - Cerveza Tirada",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            },
+            {
+                "name": "Heineken Sin Alcohol",
+                "price": "$4500",
+                "tags": [
+                    "bebida",
+                    "cerveza"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Bebidas",
+        "category": "Sidras",
+        "items": [
+            {
+                "name": "1888 botanica 750ml",
+                "price": "$12000",
+                "tags": [
+                    "bebida",
+                    "sidra"
+                ]
+            },
+            {
+                "name": "Pehuenia Ginger",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sidra"
+                ]
+            },
+            {
+                "name": "1888",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sidra"
+                ]
+            },
+            {
+                "name": "1888 Rose",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sidra"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Cócteles",
+        "category": "Mocktails (Sin Alcohol)",
+        "items": [
+            {
+                "name": "Limonada",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Pomelada",
+                "price": "$5000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Agua de Jamaica",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Agua de \"Re\" Jamaica",
+                "price": "$5500",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Bebidas",
+        "category": "Bebidas Sin Alcohol",
+        "items": [
+            {
+                "name": "Coca cola",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Coca cola Cero",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Sprite",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Fanta",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Schweppes",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Speed",
+                "price": "$3500",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Redbull",
+                "price": "$4000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Villavicencio",
+                "price": "$2000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Villavicencio c/gas",
+                "price": "$2000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            },
+            {
+                "name": "Villa del Sur Saborizada",
+                "price": "$3000",
+                "tags": [
+                    "bebida",
+                    "sin-alcohol"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Copas de Vino",
+        "items": [
+            {
+                "name": "Copa Malbec",
+                "price": "$3500 c/copa",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Copa Cabernet Suavingnon",
+                "price": "$3500 c/copa",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Copa Blanco",
+                "price": "$3500 c/copa",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Malbec",
+        "items": [
+            {
+                "name": "Don Nicanor",
+                "price": "$25000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Escorihuela Gascon",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Killka",
+                "price": "$13000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Nicassia",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato family",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Rutini",
+                "price": "$36000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Saint Felicien",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Trumpeter",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Nieto Senetiner Patrimonial",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "La Madrid",
+                "price": "$17000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Mar de Canto",
+                "price": "$18000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Crios",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Raíces Argentinas",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Más Variedades",
+        "items": [
+            {
+                "name": "Santa Julia",
+                "desc": "Chenin",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Rutini",
+                "desc": "Gewurztraminer",
+                "price": "$46000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Luigi Bosca",
+                "desc": "Sangre",
+                "price": "$27500",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato",
+                "desc": "Family fresh blend",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato red blend",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Espumantes",
+        "items": [
+            {
+                "name": "Deseado",
+                "desc": "Dulce Natural",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Baron B",
+                "desc": "Brut Nature",
+                "price": "$52000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Mum",
+                "desc": "Brut Nature",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "desc": "Brut Nature",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Chandon",
+                "desc": "Demi Sec",
+                "price": "$22000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Chandon",
+                "desc": "Extra Brut",
+                "price": "$22000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Baron B",
+                "desc": "Extra Brut",
+                "price": "$48000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Chandon",
+                "desc": "Rose",
+                "price": "$22000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "desc": "Rose",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Sauvignon Blanc",
+        "items": [
+            {
+                "name": "Rutini",
+                "price": "$25000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Trumpeter",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato family",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Cabernet Sauvignon",
+        "items": [
+            {
+                "name": "Escorihuela Gascon",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Killka",
+                "price": "$13500",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "La Madrid",
+                "price": "$17000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Saint Felicien",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato family",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Cabernet Franc",
+        "items": [
+            {
+                "name": "Angelica",
+                "price": "$44000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Enemigo",
+                "price": "$36500",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Nicassia",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Rutini",
+                "price": "$33000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Saint Felicien",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Trumpeter",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Mar de Canto",
+                "price": "$18000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "No sos vos, soy yo",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Chardonnay",
+        "items": [
+            {
+                "name": "Alamos",
+                "price": "$14000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Rutini",
+                "price": "$30000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Trumpeter",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Salentein",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Saint Felicien",
+                "price": "$19000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Sposato family",
+                "price": "$15000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Bivarietal",
+        "items": [
+            {
+                "name": "Dv Catena (cabernet malbec)",
+                "price": "$30000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Rutini (cabernet malbec)",
+                "price": "$33000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Los bochero (cabernet malbec)",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "H. J. Fabre (malbec cabernet f)",
+                "price": "$16000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    },
+    {
+        "parent": "Vinos",
+        "category": "Reservas",
+        "items": [
+            {
+                "name": "Sottano",
+                "desc": "Reserva Malbec",
+                "price": "$20000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Trumpeter",
+                "desc": "Reserva Malbec",
+                "price": "$21000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            },
+            {
+                "name": "Escorihuela Gascon",
+                "desc": "Gran Reserva",
+                "price": "$27000",
+                "tags": [
+                    "bebida",
+                    "vino"
+                ]
+            }
+        ]
+    }
+]

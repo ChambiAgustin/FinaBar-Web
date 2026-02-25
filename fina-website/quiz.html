@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#063023">
+    <title>Tu Trago Ideal | FINA Cocktail Bar</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Ionicons -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.min.css">
+    <style>
+        /* Quiz Specific Styling */
+        body {
+            background-color: var(--color-black);
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* Allow scrolling */
+            /* Prevent scroll on quiz page */
+            font-family: var(--font-body);
+        }
+
+        /* Neon Gold Arches Background */
+        .neon-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            /* Subtle dark gradient base */
+            background: radial-gradient(circle at center, var(--secondary-green) 0%, #000 90%);
+        }
+
+        .neon-arch {
+            position: absolute;
+            border: 2px solid rgba(173, 152, 85, 0.1);
+            border-top: 2px solid rgba(173, 152, 85, 0.6);
+            border-radius: 50%;
+            box-shadow: 0 -5px 20px rgba(173, 152, 85, 0.2);
+            opacity: 0;
+            animation: pulseArch 6s infinite ease-in-out;
+            transform: translate(-50%, 20%);
+            left: 50%;
+        }
+
+        .neon-arch:nth-child(1) {
+            bottom: -10vh;
+            width: 80vw;
+            height: 80vw;
+            animation-delay: 0s;
+        }
+
+        .neon-arch:nth-child(2) {
+            bottom: -20vh;
+            width: 120vw;
+            height: 120vw;
+            animation-delay: 2s;
+            border-color: rgba(173, 152, 85, 0.2);
+            border-top-color: rgba(173, 152, 85, 0.4);
+        }
+
+        .neon-arch:nth-child(3) {
+            bottom: -30vh;
+            width: 160vw;
+            height: 160vw;
+            animation-delay: 4s;
+            border-color: rgba(173, 152, 85, 0.05);
+            border-top-color: rgba(173, 152, 85, 0.2);
+        }
+
+        @keyframes pulseArch {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: translate(-50%, 20%) scale(1);
+                box-shadow: 0 -5px 20px rgba(173, 152, 85, 0.2);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: translate(-50%, 20%) scale(1.05);
+                box-shadow: 0 -10px 40px rgba(173, 152, 85, 0.4);
+            }
+        }
+
+        .quiz-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            width: 100%;
+            /* Minimalist Glassmorphism */
+            background: rgba(4, 20, 16, 0.85);
+            border: 1px solid rgba(173, 152, 85, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .question-step {
+            display: none;
+            animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .question-step.active {
+            display: block;
+        }
+
+        .quiz-progress {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        .quiz-question {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-family: var(--font-heading);
+            font-weight: 300;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .quiz-btn {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(173, 152, 85, 0.3);
+            color: var(--text-light);
+            padding: 18px 25px;
+            border-radius: 50px; /* Fully rounded buttons */
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .quiz-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(173, 152, 85, 0.1), transparent);
+            transition: width 0.4s;
+            z-index: 1;
+        }
+
+        .quiz-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--primary-green);
+            background: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(173, 152, 85, 0.4);
+        }
+
+        .quiz-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Result Styles */
+        .result-title {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            font-family: var(--font-heading);
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(173, 152, 85, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .result-profile {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .recommended-card {
+            margin: 20px auto;
+            max-width: 320px;
+            border: 1px solid var(--accent-gold);
+            border-radius: 15px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s;
+        }
+
+        .recommended-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(173, 152, 85, 0.2);
+        }
+
+        .recommended-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(173, 152, 85, 0.2);
+        }
+
+        .recommended-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .drink-name {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .drink-separator {
+            width: 40px;
+            height: 2px;
+            background: rgba(173, 152, 85, 0.5);
+            margin: 0 auto 15px;
+        }
+
+        .drink-desc {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .drink-price {
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: var(--accent-gold);
+            color: var(--primary-green);
+            padding: 12px 30px;
+            border: none;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(173, 152, 85, 0.5);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navbar Override */
+        .nav-back {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 20;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .nav-back:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(173, 152, 85, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Neon Background -->
+    <div class="neon-bg">
+        <div class="neon-arch"></div>
+        <div class="neon-arch"></div>
+        <div class="neon-arch"></div>
+    </div>
+
+    <a href="menu.html" class="nav-back">
+        <ion-icon name="arrow-back-outline"></ion-icon> Volver
+    </a>
+
+    <div class="quiz-page">
+        <div class="quiz-container">
+
+            <!-- INTRO -->
+            <div id="intro-step" class="question-step active">
+                <div style="font-size: 4rem; color: var(--accent-gold); margin-bottom: 10px;">
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                </div>
+                <h1
+                    style="font-size: 3.5rem; margin-bottom: 10px; line-height: 1; font-family: var(--font-heading); color: #fff;">
+                    TU TRAGO <br><span style="color: var(--accent-gold);">IDEAL</span></h1>
+                <p
+                    style="margin-bottom: 40px; font-size: 1.1rem; color: var(--text-muted); max-width: 400px; margin-left: auto; margin-right: auto;">
+                    Responde 5 preguntas rápidas y deja que nuestros bartenders virtuales elijan por vos.
+                </p>
+                <button class="cta-btn" onclick="startQuiz()">COMENZAR EXPERIENCIA</button>
+            </div>
+
+            <!-- QUESTIONS CONTAINER -->
+            <div id="quiz-flow"></div>
+
+            <!-- RESULT -->
+            <div id="result-step" class="question-step">
+                <h2 class="result-title">Tu Perfil es...</h2>
+                <div id="profile-text" class="result-profile">...</div>
+
+                <div class="deco-line"
+                    style="width: 50px; height: 2px; background: var(--accent-gold); margin: 0 auto 30px;"></div>
+
+                <p
+                    style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; color:var(--text-muted); margin-bottom: 15px;">
+                    Te recomendamos:</p>
+
+                <div id="recommendation-content">
+                    <!-- Card injected here -->
+                </div>
+
+                <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+                    <button class="cta-btn" onclick="location.reload()"
+                        style="background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold);">REINTENTAR</button>
+                    <a href="menu.html" class="cta-btn" style="text-decoration: none; color: var(--primary-green);">VER
+                        CARTA</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Need data from here -->
+    <script>
+        // QUIZ DATA
+        const questions = [
+            {
+                q: "1. ¿Qué tipo de sabores preferís hoy?",
+                options: [
+                    { t: "Dulces y frutales 🍓", tag: "dulce", type: "score" },
+                    { t: "Cítricos y refrescantes 🍋", tag: "citrico", type: "score" },
+                    { t: "Amargos y complejos 🥃", tag: "amargo", type: "score" },
+                    { t: "Secos y fuertes 🍸", tag: "seco", type: "score" }
+                ]
+            },
+            {
+                q: "2. ¿En qué etapa de la noche estás?",
+                options: [
+                    { t: "Recién arranco, busco algo ligero.", tag: "sutil", type: "score" },
+                    { t: "Ya entré en ritmo, con más cuerpo.", tag: "equilibrado", type: "score" },
+                    { t: "Última copa para cerrar (o seguir).", tag: "fuerte", type: "score" }
+                ]
+            },
+            {
+                q: "3. ¿Cómo describirías tu plan?",
+                options: [
+                    { t: "Tranqui, charlando sentado.", tag: "clasico", type: "score" },
+                    { t: "Fiesta o salida con amigos.", tag: "fiesta", type: "score" },
+                    { t: "Explorando sabores nuevos.", tag: "autor", type: "score" }
+                ]
+            },
+            {
+                q: "4. Intensidad de alcohol preferida:",
+                options: [
+                    { t: "Que casi ni se note.", tag: "suave", type: "score" },
+                    { t: "Equilibrado, presente pero amable.", tag: "equilibrado", type: "score" },
+                    { t: "Presencia fuerte, con carácter.", tag: "fuerte", type: "score" }
+                ]
+            },
+            {
+                q: "5. ¿Qué NO querés tomar hoy?",
+                options: [
+                    { t: "Nada tropical.", tag: "tropical", type: "block" },
+                    { t: "Nada empalagoso.", tag: "dulce", type: "block" },
+                    { t: "Nada herbal o verde.", tag: "herbales", type: "block" },
+                    { t: "Nada amargo.", tag: "amargo", type: "block" },
+                    { t: "Nada muy seco/fuerte.", tag: "seco", type: "block" }
+                ]
+            }
+        ];
+
+        let currentQ = 0;
+        let blockedTags = [];
+        let scores = {
+            "DulceFiesta": 0,
+            "AmargoClasico": 0,
+            "RefrescanteSutil": 0
+        };
+
+        // Improved Tag Map
+        const tagMap = {
+            "dulce": "DulceFiesta", "fiesta": "DulceFiesta", "tropical": "DulceFiesta", "suave": "DulceFiesta",
+            "amargo": "AmargoClasico", "clasico": "AmargoClasico", "fuerte": "AmargoClasico", "seco": "AmargoClasico",
+            "citrico": "RefrescanteSutil", "sutil": "RefrescanteSutil", "autor": "RefrescanteSutil", "equilibrado": "RefrescanteSutil", "herbales": "RefrescanteSutil"
+        };
+
+        const profiles = {
+            "DulceFiesta": {
+                title: "Alma de Fiesta",
+                desc: "Buscas disfrutar sin preocupaciones. Sabores amables, dulces o frutales que acompañen el buen momento.",
+                keywords: ["dulces", "frutal", "suave", "tikis"]
+            },
+            "AmargoClasico": {
+                title: "Carácter & Tradición",
+                desc: "Apreciás la intensidad. Sabores definidos, secos, fuertes o amargos. Un trago con personalidad para alguien igual.",
+                keywords: ["secos", "fuerte", "amargo"]
+            },
+            "RefrescanteSutil": {
+                title: "Explorador Sensorial",
+                desc: "Equilibrio ante todo. Ni muy dulce ni muy agresivo. Buscas frescura, notas cítricas y complejidad.",
+                keywords: ["citricos", "equilibrado", "herbales", "autor"]
+            }
+        };
+
+        function startQuiz() {
+            document.getElementById('intro-step').classList.remove('active');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const container = document.getElementById('quiz-flow');
+            container.innerHTML = '';
+
+            const q = questions[currentQ];
+
+            const step = document.createElement('div');
+            step.className = 'question-step active';
+            step.innerHTML = `
+                <div class="quiz-progress">PASO ${currentQ + 1} / ${questions.length}</div>
+                <h3 class="quiz-question">${q.q}</h3>
+                <div class="options-grid">
+                    ${q.options.map((opt) => `
+                        <button class="quiz-btn" onclick="answer('${opt.tag}', '${opt.type}')">
+                            <span>${opt.t}</span>
+                            <ion-icon name="chevron-forward-outline" style="opacity: 0.5;"></ion-icon>
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+            container.appendChild(step);
+        }
+
+        function answer(tag, type) {
+            if (type === 'block') {
+                blockedTags.push(tag);
+            } else {
+                const category = tagMap[tag] || "RefrescanteSutil";
+                scores[category]++;
+            }
+
+            currentQ++;
+            if (currentQ < questions.length) {
+                renderQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        async function showResult() {
+            document.getElementById('quiz-flow').style.display = 'none';
+            const resultStep = document.getElementById('result-step');
+            resultStep.classList.add('active');
+
+            let winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+            const profile = profiles[winner];
+
+            document.getElementById('profile-text').textContent = `"${profile.desc}"`;
+            document.querySelector('.result-title').textContent = profile.title;
+
+            let candidates = [];
+            let fallbackName = "Gin Tonic Clásico";
+            let fallbackDesc = "El equilibrio perfecto.";
+            let fallbackPrice = "$6000";
+
+            try {
+                // Fetch the new JSON structure
+                const response = await fetch('menu.json');
+                const menuData = await response.json();
+
+                const targetKeywords = profile.keywords;
+                const validCategories = ["Cocktelería de Autor", "Tikis", "Cocktelería Clásica"];
+
+                menuData.forEach(cat => {
+                    if (validCategories.includes(cat.category)) {
+                        cat.items.forEach(item => {
+                            if (item.tags) {
+                                const isBlocked = item.tags.some(t => blockedTags.includes(t));
+                                if (isBlocked) return;
+                                
+                                const hasMatch = item.tags.some(t => targetKeywords.includes(t));
+                                if (hasMatch) candidates.push(item);
+                            }
+                        });
+                    }
+                });
+            } catch (error) {
+                console.error("Error loading menu data for quiz:", error);
+            }
+
+            // Fallback if no specific matches found or fetch failed
+            if (candidates.length === 0) {
+                candidates = [{ name: fallbackName, desc: fallbackDesc, price: fallbackPrice }];
+            }
+
+            const selected = candidates[Math.floor(Math.random() * candidates.length)];
+            let imgSrc = `https://placehold.co/400x350/063023/AD9855?text=${encodeURIComponent(selected.name)}`;
+
+            const recContainer = document.getElementById('recommendation-content');
+            recContainer.innerHTML = `
+                <div class="recommended-card">
+                    <img src="${imgSrc}" alt="${selected.name}">
+                    <div class="recommended-info">
+                        <h3 class="drink-name">${selected.name}</h3>
+                        <div class="drink-separator"></div>
+                        <p class="drink-desc">${selected.desc || 'Consultar ingredientes en barra.'}</p>
+                        <div class="drink-price">${selected.price}</div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+    <script src="script.min.js"></script>
+</body>
+
+</html>

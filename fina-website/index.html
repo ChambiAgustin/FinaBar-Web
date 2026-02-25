@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#052b22">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description"
+        content="Fina Cocktail Bar - Una experiencia fina que inaugura un nuevo ritual. Cocteles de autor, clásicos y vinos en un ambiente exclusivo.">
+    <title>FINA Cocktail Bar</title>
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FINA Cocktail Bar | Río Cuarto">
+    <meta property="og:description"
+        content="Una experiencia fina que inaugura un nuevo ritual. Cocteles de autor, clásicos y vinos en un ambiente exclusivo.">
+    <meta property="og:image" content="https://fina-bar.com/images/Clientes1.jpg">
+    <!-- Reemplazar con URL real final -->
+    <meta property="og:url" content="https://fina-bar.com">
+    
+    <!-- PWA Setup & Fonts Preload -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <!-- Spotify Floating Button -->
+    <a href="https://open.spotify.com/playlist/4Q3wBJmUKFRTv3OoUbJhDI" class="spotify-btn" target="_blank"
+        aria-label="Listen on Spotify">
+        <ion-icon name="musical-notes"></ion-icon>
+        <div class="spotify-wave"></div>
+        <span class="spotify-tooltip">Nuestra Playlist</span>
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493585142160" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <span class="whatsapp-tooltip">¡Reservá tu mesa!</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">FINA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#location">Ubicación</a></li>
+            <li><a href="#reviews">Reseñas</a></li>
+            <li><a href="menu.html">Carta</a></li>
+        </ul>
+        <div class="hamburger">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="close-menu"><ion-icon name="close-outline"></ion-icon></div>
+        <ul>
+            <li><a href="#home" class="mobile-link">Inicio</a></li>
+            <li><a href="#location" class="mobile-link">Ubicación</a></li>
+            <li><a href="#reviews" class="mobile-link">Reseñas</a></li>
+            <li><a href="menu.html" class="mobile-link">Carta</a></li>
+        </ul>
+    </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+                <a href="#home" class="mobile-nav-link active">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="menu.html" class="mobile-nav-link">
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                    <span>Carta</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="https://wa.me/5493585142160" target="_blank" class="mobile-nav-link whatsapp-link">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <span>WhatsApp</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <p class="script-subtitle">Una experiencia</p>
+            <h1 class="main-title">FINA</h1>
+            <p class="sub-title">COCKTAIL BAR</p>
+            <div class="deco-line"></div>
+            <p class="tagline">inaugura un nuevo <span class="script-accent">Ritual</span></p>
+            <a href="menu.html" class="cta-btn">VER CARTA</a>
+        </div>
+
+        <!-- Decoration Arches (CSS) -->
+        <div class="arch arch-left"></div>
+        <div class="arch arch-right"></div>
+    </header>
+
+    <!-- Promos & Payment Info Section (Injected by JS) -->
+    <section id="promo-container" style="padding: 60px 0; background: var(--primary-green); overflow: hidden;"></section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container-three-col">
+            <!-- Left Images -->
+            <div class="about-photo left">
+                <video autoplay loop muted playsinline>
+                    <source src="images/Noche Fina V1.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <img src="images/Noche FINA 1.jpg" alt="Noche FINA" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Middle Text -->
+            <div class="about-text-center">
+                <p class="section-subtitle"
+                    style="color: var(--accent-gold); letter-spacing: 3px; margin-bottom: 10px;">QUIÉNES SOMOS</p>
+                <h2 class="about-title">Cocktelería de <br>Vanguardia</h2>
+                <div class="deco-line" style="margin: 0 auto 30px;"></div>
+
+                <p class="about-desc">
+                    Nuestro espacio es mucho más que un bar, es una experiencia vanguardista, vamos más allá. Un moderno
+                    universal que sabe de elegancia, confort y buenos placeres gastronómicos.
+                </p>
+                <p class="about-desc">
+                    Una copa de vino que te cambia la noche, un cóctel que no esperabas y esa sensación de estar en el
+                    lugar correcto. Música que fluye, tragos únicos que deleitan tu paladar y un ambiente que te invita
+                    a
+                    quedarte.
+                </p>
+            </div>
+
+            <!-- Right Images -->
+            <div class="about-photo right">
+                <img src="images/Clientes2.jpg" alt="Amigos en FINA" loading="lazy" decoding="async">
+                <img src="images/Noche Fina 2.jpg" alt="Ambiente nocturno" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bar Section -->
+    <section id="bar" class="about-section"
+        style="background: linear-gradient(to bottom, var(--secondary-green), #000);">
+        <div class="about-container-three-col">
+            <!-- Left Images -->
+            <div class="about-photo left">
+                <img src="images/Barra 3.jpg" alt="Barra FINA" loading="lazy" decoding="async">
+                <img src="images/Sunset FINA 1.jpg" alt="Sunset en FINA" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Middle Text -->
+            <div class="about-text-center">
+                <p class="section-subtitle"
+                    style="color: var(--accent-gold); letter-spacing: 3px; margin-bottom: 10px;">NUESTRA BARRA</p>
+                <h2 class="about-title">Alquimia & Pasión</h2>
+                <div class="deco-line" style="margin: 0 auto 30px;"></div>
+
+                <p class="about-desc">
+                    En <strong>FINA</strong>, la barra es nuestro altar. Un espacio donde la precisión se encuentra con
+                    la creatividad.
+                </p>
+                <p class="about-desc">
+                    Nuestros bartenders son alquimistas que transforman destilados premium e ingredientes frescos en
+                    experiencias líquidas inolvidables.
+                </p>
+            </div>
+
+            <!-- Right Media (Image + Video) -->
+            <div class="about-photo right">
+                <img src="images/Barman 1.jpg" alt="Bartender en acción" loading="lazy">
+                <video autoplay loop muted playsinline>
+                    <source src="images/Barman V1.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Reviews Section -->
+    <section id="location" class="location-section">
+        <div class="container">
+            <h2 class="section-title">Encontranos</h2>
+            <div class="deco-line" style="margin: 0 auto 40px;"></div>
+
+            <!-- Business Hours (Featured prominently) -->
+            <div class="schedules-container" style="text-align: center; margin-bottom: 50px;">
+                <h3 style="color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 20px; font-size: 1.8rem;">Horarios de Atención</h3>
+                <div style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto; background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                        <span style="font-weight: 500;"><ion-icon name="time-outline" style="vertical-align: middle; margin-right: 5px; color: var(--accent-gold);"></ion-icon> Mié - Jue:</span>
+                        <span style="color: var(--text-light);">20:00 - 01:00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px;">
+                        <span style="font-weight: 500;"><ion-icon name="time-sharp" style="vertical-align: middle; margin-right: 5px; color: var(--accent-gold);"></ion-icon> Vie - Sáb:</span>
+                        <span style="color: var(--text-light);">20:00 - 02:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-content" style="margin-top: 40px;">
+                <div class="map-container">
+                    <!-- Paunero 37, Río Cuarto Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.871583073748!2d-64.3524!3d-33.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPaunero+37%2C+R%C3%ADo+Cuarto%2C+C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1600000000000"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    <a href="https://maps.app.goo.gl/nxqYUH7J5ucRBwQb7" target="_blank" class="maps-btn">
+                        <ion-icon name="map-outline"></ion-icon> Ver Ubicación Exacta
+                    </a>
+                </div>
+
+                <div class="info-content">
+                    <div class="info-item" style="font-size: 1.2rem; margin-top: 20px;">
+                        <ion-icon name="location-sharp" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 10px;"></ion-icon>
+                        <p>Paunero 37<br><span style="font-size: 0.9rem; color: var(--text-muted);">Río Cuarto, Córdoba</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Reviews Section -->
+            <div class="reviews-section" id="reviews">
+                <div class="google-header">
+                    <div class="google-logo">
+                        <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span
+                            class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+                    </div>
+                    <div class="rating-info">
+                        <span class="rating-score">4.5</span>
+                        <div class="stars-static">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="reviews-carousel">
+                    <div class="reviews-track" id="reviews-track">
+                        <!-- Items injected by JS -->
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button id="prevBtn" class="nav-btn"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <div class="dots-container" id="dots-container"></div>
+                    <button id="nextBtn" class="nav-btn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Payment Info Banner -->
+    <div class="container">
+        <div class="payment-banner" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 15px; margin-bottom: 20px;">
+            <div class="payment-content" style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                <ion-icon name="wallet-outline"></ion-icon>
+                <span>Aceptamos todos los medios de pago</span>
+            </div>
+            <div class="payment-icons" style="display: flex; gap: 15px; font-size: 2rem; justify-content: center;">
+                <ion-icon name="card-outline" title="Tarjetas de Crédito y Débito"></ion-icon>
+                <ion-icon name="phone-portrait-outline" title="MercadoPago y Transferencias"></ion-icon>
+                <ion-icon name="cash-outline" title="Efectivo"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/finacocktailbar" target="_blank" aria-label="Instagram"><ion-icon
+                    name="logo-instagram"></ion-icon></a>
+            <a href="https://wa.me/5493585142160" target="_blank" aria-label="WhatsApp"><ion-icon
+                    name="logo-whatsapp"></ion-icon></a>
+            <a href="mailto:hugo_lopez_96@hotmail.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+        </div>
+        <p>&copy; 2026 FINA Cocktail Bar. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- PWA Install Prompt -->
+    <div id="pwa-install-prompt" class="pwa-prompt hidden">
+        <div class="pwa-prompt-content">
+            <img src="images/icon-192.png" alt="Fina Logo" class="pwa-icon" loading="lazy">
+            <div class="pwa-text">
+                <h4>Fina Cocktail Bar</h4>
+                <p>Agregá la App a tu inicio</p>
+            </div>
+        </div>
+        <div class="pwa-actions">
+            <button id="pwa-close" class="pwa-btn-secondary">Ahora no</button>
+            <button id="pwa-install-btn" class="pwa-btn-primary">Instalar</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
