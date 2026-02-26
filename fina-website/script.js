@@ -25,6 +25,11 @@ const reviewsData = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Prevent browser from restoring previous scroll position on reload
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
 
     const path = window.location.pathname;
     const isMenuPage = path.includes('menu.html') || document.getElementById('menu-container');
@@ -95,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (menuContainer && isMenuPage) {
-        
+
         // Fetch menu data asynchronously
         fetch('menu.json')
             .then(response => {
@@ -144,10 +149,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         btn.addEventListener('click', () => {
                             isScrollingByClick = true; // Lock observer updates
-                            
+
+                            // Reset search and filter to "Todos" automatically
+                            const searchBox = document.getElementById('menu-search');
+                            if (searchBox) {
+                                searchBox.value = "";
+                            }
+                            const allFilterChip = document.querySelector('.chip[data-filter="all"]');
+                            if (allFilterChip && !allFilterChip.classList.contains('active')) {
+                                allFilterChip.click();
+                            } else if (searchBox) {
+                                // If already on "Todos" but search is active, trigger input event manually to clear
+                                searchBox.dispatchEvent(new Event('input'));
+                            }
+
                             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
                             btn.classList.add('active');
-                            
+
                             // Center horizontally in the nav
                             const navContainer = document.getElementById('category-nav');
                             if (navContainer) {
@@ -166,10 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const headerHeight = document.querySelector('.navbar') ? document.querySelector('.navbar').offsetHeight : 0;
                                 const navHeight = categoryNav ? categoryNav.offsetHeight : 0;
                                 const offset = headerHeight + navHeight + 20; // 20px extra padding
-                                
+
                                 const elementPosition = targetEl.getBoundingClientRect().top;
                                 const offsetPosition = elementPosition + window.pageYOffset - offset;
-                                
+
                                 window.scrollTo({
                                     top: offsetPosition,
                                     behavior: 'smooth'
@@ -202,10 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         groupContainer.appendChild(groupHeader);
 
                         let groupHtml = ''; // Use string concat for inner contents to minimize DOM reflows
-                        
+
                         groups[parentName].forEach((cat) => {
                             let cardsHtml = '';
-                            
+
                             cat.items.forEach(item => {
                                 const categoriesWithImages = [
                                     "Cocktelería de Autor", "Tikis", "Cocktelería Clásica",
@@ -214,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 ];
                                 const showImage = categoriesWithImages.includes(cat.category);
                                 const cardClass = showImage ? 'menu-card' : 'menu-card compact-card';
-                                
+
                                 let tagsData = item.tags ? `data-tags="${item.tags.join(' ')}"` : '';
                                 let historyData = item.history ? `data-history="${item.history.replace(/"/g, '&quot;')}"` : '';
                                 let pairingData = item.pairing ? `data-pairing="${item.pairing.replace(/"/g, '&quot;')}"` : '';
@@ -295,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     rootMargin: '-20% 0px -40% 0px', // Wider detection zone to catch fast scrolling
                     threshold: 0
                 };
-                
+
                 const spyObserver = new IntersectionObserver((entries) => {
                     if (isScrollingByClick) return; // Prevent observer from reacting during smooth scrolls
 
@@ -316,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (navContainer) {
                                     const btnRect = btn.getBoundingClientRect();
                                     const navRect = navContainer.getBoundingClientRect();
-                                    
+
                                     if (btnRect.left < navRect.left || btnRect.right > navRect.right) {
                                         navContainer.scrollBy({
                                             left: btnRect.left - navRect.left - (navRect.width / 2) + (btnRect.width / 2),
@@ -332,10 +350,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.menu-group').forEach(group => {
                     spyObserver.observe(group);
                 });
-                
+
                 // Initialize Search & Filter AFTER menu generation
                 initSearchAndFilter();
-                
+
             })
             .catch(error => {
                 console.error('Error fetching menu.json:', error);
@@ -488,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const matchesFilter = filter === 'all' || tags.includes(filter);
 
                     if (matchesSearch && matchesFilter) {
-                        card.style.display = 'block';
+                        card.style.display = '';
                     } else {
                         card.style.display = 'none';
                     }
@@ -496,12 +514,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // 2. Hide Empty Categories
                 categories.forEach(cat => {
-                    const visibleCards = cat.querySelectorAll('.menu-card[style*="display: block"]');
+                    const visibleCards = Array.from(cat.querySelectorAll('.menu-card')).filter(card => card.style.display !== 'none');
                     const msg = cat.querySelector('.no-items-msg');
                     if (msg) msg.remove(); // Remove old messages
 
                     if (visibleCards.length > 0) {
-                        cat.style.display = 'block';
+                        cat.style.display = '';
                     } else {
                         cat.style.display = 'none'; // Completely Hide
                     }
@@ -509,9 +527,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // 3. Hide Empty Groups (If all children categories are hidden)
                 groups.forEach(group => {
-                    const visibleCategories = group.querySelectorAll('.menu-category[style*="display: block"]');
+                    const visibleCategories = Array.from(group.querySelectorAll('.menu-category')).filter(category => category.style.display !== 'none');
                     if (visibleCategories.length > 0) {
-                        group.style.display = 'block';
+                        group.style.display = '';
                     } else {
                         group.style.display = 'none';
                     }
@@ -597,13 +615,13 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             // Stash the event so it can be triggered later.
             deferredPrompt = e;
-            
+
             // Show our custom UI after a short delay so it doesn't interrupt extreme quick scrolling
             setTimeout(() => {
                 pwaPrompt.classList.remove('hidden');
                 // Small delay to allow display:block to apply before animating transform
                 setTimeout(() => pwaPrompt.classList.add('visible'), 100);
-            }, 3000); 
+            }, 3000);
         });
 
         pwaInstallBtn.addEventListener('click', async () => {

@@ -156,7 +156,8 @@
             border: 1px solid rgba(173, 152, 85, 0.3);
             color: var(--text-light);
             padding: 18px 25px;
-            border-radius: 50px; /* Fully rounded buttons */
+            border-radius: 50px;
+            /* Fully rounded buttons */
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             font-family: var(--font-body);
@@ -191,6 +192,40 @@
 
         .quiz-btn:active {
             transform: scale(0.98);
+        }
+
+        .quiz-btn.locked-opt {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.4);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+        }
+
+        .quiz-btn.locked-opt:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.4);
+            color: var(--text-light);
+        }
+
+        .locked-top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .locked-msg {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-top: 8px;
+            font-style: italic;
+            text-align: left;
+            line-height: 1.2;
+            opacity: 0.8;
         }
 
         /* Result Styles */
@@ -401,16 +436,17 @@
             {
                 q: "1. ¿Qué tipo de sabores preferís hoy?",
                 options: [
-                    { t: "Dulces y frutales 🍓", tag: "dulce", type: "score" },
-                    { t: "Cítricos y refrescantes 🍋", tag: "citrico", type: "score" },
-                    { t: "Amargos y complejos 🥃", tag: "amargo", type: "score" },
-                    { t: "Secos y fuertes 🍸", tag: "seco", type: "score" }
+                    { t: "Dulces y frutales 🍓", tag: "dulces", type: "score" },
+                    { t: "Cítricos y refrescantes 🍋", tag: "citricos", type: "score" },
+                    { t: "Herbales y botánicos 🌿", tag: "herbales", type: "score" },
+                    { t: "Secos y complejos 🥃", tag: "secos", type: "score" },
+                    { t: "Amargos y aperitivos 🍸", tag: "amargo", type: "score" }
                 ]
             },
             {
                 q: "2. ¿En qué etapa de la noche estás?",
                 options: [
-                    { t: "Recién arranco, busco algo ligero.", tag: "sutil", type: "score" },
+                    { t: "Recién arranco, busco algo suave.", tag: "suave", type: "score" },
                     { t: "Ya entré en ritmo, con más cuerpo.", tag: "equilibrado", type: "score" },
                     { t: "Última copa para cerrar (o seguir).", tag: "fuerte", type: "score" }
                 ]
@@ -433,29 +469,29 @@
             },
             {
                 q: "5. ¿Qué NO querés tomar hoy?",
+                multiple: 3,
+                note: "* Se pueden seleccionar hasta 3 respuestas",
                 options: [
-                    { t: "Nada tropical.", tag: "tropical", type: "block" },
-                    { t: "Nada empalagoso.", tag: "dulce", type: "block" },
-                    { t: "Nada herbal o verde.", tag: "herbales", type: "block" },
-                    { t: "Nada amargo.", tag: "amargo", type: "block" },
-                    { t: "Nada muy seco/fuerte.", tag: "seco", type: "block" }
+                    { t: "Nada dulce o empalagoso.", tag: "dulces", type: "block" },
+                    { t: "Nada muy cítrico o ácido.", tag: "citricos", type: "block" },
+                    { t: "Nada herbal o botánico.", tag: "herbales", type: "block" },
+                    { t: "Nada muy seco.", tag: "secos", type: "block" },
+                    { t: "Nada de notas amargas.", tag: "amargo", type: "block" },
+                    { t: "Nada muy fuerte.", tag: "fuerte", type: "block" }
                 ]
             }
         ];
 
         let currentQ = 0;
         let blockedTags = [];
-        let scores = {
-            "DulceFiesta": 0,
-            "AmargoClasico": 0,
-            "RefrescanteSutil": 0
-        };
+        let q1Tag = "";
+        let q4Tag = "";
+        let preferenceTags = [];
 
-        // Improved Tag Map
         const tagMap = {
-            "dulce": "DulceFiesta", "fiesta": "DulceFiesta", "tropical": "DulceFiesta", "suave": "DulceFiesta",
-            "amargo": "AmargoClasico", "clasico": "AmargoClasico", "fuerte": "AmargoClasico", "seco": "AmargoClasico",
-            "citrico": "RefrescanteSutil", "sutil": "RefrescanteSutil", "autor": "RefrescanteSutil", "equilibrado": "RefrescanteSutil", "herbales": "RefrescanteSutil"
+            "dulces": "DulceFiesta",
+            "secos": "AmargoClasico", "amargo": "AmargoClasico",
+            "citricos": "RefrescanteSutil", "herbales": "RefrescanteSutil"
         };
 
         const profiles = {
@@ -466,15 +502,17 @@
             },
             "AmargoClasico": {
                 title: "Carácter & Tradición",
-                desc: "Apreciás la intensidad. Sabores definidos, secos, fuertes o amargos. Un trago con personalidad para alguien igual.",
-                keywords: ["secos", "fuerte", "amargo"]
+                desc: "Apreciás la elegancia y la intensidad. Sabores definidos, secos y fuertes. Un trago con personalidad para alguien igual.",
+                keywords: ["secos", "fuerte"]
             },
             "RefrescanteSutil": {
                 title: "Explorador Sensorial",
                 desc: "Equilibrio ante todo. Ni muy dulce ni muy agresivo. Buscas frescura, notas cítricas y complejidad.",
-                keywords: ["citricos", "equilibrado", "herbales", "autor"]
+                keywords: ["citricos", "equilibrado", "autor"]
             }
         };
+
+        let currentSelections = [];
 
         function startQuiz() {
             document.getElementById('intro-step').classList.remove('active');
@@ -484,33 +522,105 @@
         function renderQuestion() {
             const container = document.getElementById('quiz-flow');
             container.innerHTML = '';
+            currentSelections = []; // Reset selections
 
             const q = questions[currentQ];
 
             const step = document.createElement('div');
             step.className = 'question-step active';
+
+            let noteHtml = q.note ? `<p style="color: var(--accent-gold); font-size: 0.9rem; margin-top: -30px; margin-bottom: 30px; font-style: italic;">${q.note}</p>` : '';
+
+            let optionsHtml = '';
+            if (q.multiple) {
+                optionsHtml = q.options.map((opt, index) => {
+                    let isLockedByQ1 = (currentQ === 4 && opt.tag === q1Tag);
+                    let isLockedByQ4 = (currentQ === 4 && opt.tag === q4Tag);
+
+                    if (isLockedByQ1 || isLockedByQ4) {
+                        let lockReason = isLockedByQ1 ? "Ya elegiste buscar este sabor en la primer pregunta." : "Ya elegiste buscar esta intensidad de alcohol en la pregunta anterior.";
+                        return `
+                        <div class="quiz-btn locked-opt">
+                            <div class="locked-top">
+                                <span>${opt.t}</span>
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                            </div>
+                            <span class="locked-msg">Bloqueado: ${lockReason}</span>
+                        </div>
+                        `;
+                    }
+                    return `
+                    <button class="quiz-btn multi-btn" id="opt-${index}" onclick="multiSelect('${opt.tag}', '${opt.type}', ${index}, ${q.multiple})">
+                        <span>${opt.t}</span>
+                        <ion-icon name="checkmark-circle-outline" style="opacity: 0.2;"></ion-icon>
+                    </button>
+                    `;
+                }).join('');
+
+                optionsHtml += `
+                    <button class="cta-btn" style="width: 100%; margin-top: 20px; text-align: center; display: block;" onclick="submitMultiple()">SIGUIENTE</button>
+                `;
+            } else {
+                optionsHtml = q.options.map((opt) => `
+                    <button class="quiz-btn" onclick="answer([{tag: '${opt.tag}', type: '${opt.type}'}])">
+                        <span>${opt.t}</span>
+                        <ion-icon name="chevron-forward-outline" style="opacity: 0.5;"></ion-icon>
+                    </button>
+                `).join('');
+            }
+
             step.innerHTML = `
                 <div class="quiz-progress">PASO ${currentQ + 1} / ${questions.length}</div>
                 <h3 class="quiz-question">${q.q}</h3>
+                ${noteHtml}
                 <div class="options-grid">
-                    ${q.options.map((opt) => `
-                        <button class="quiz-btn" onclick="answer('${opt.tag}', '${opt.type}')">
-                            <span>${opt.t}</span>
-                            <ion-icon name="chevron-forward-outline" style="opacity: 0.5;"></ion-icon>
-                        </button>
-                    `).join('')}
+                    ${optionsHtml}
                 </div>
             `;
             container.appendChild(step);
         }
 
-        function answer(tag, type) {
-            if (type === 'block') {
-                blockedTags.push(tag);
+        function multiSelect(tag, type, idx, limit) {
+            const btn = document.getElementById(`opt-${idx}`);
+            const existingIdx = currentSelections.findIndex(s => s.tag === tag);
+
+            if (existingIdx > -1) {
+                // Deselect
+                currentSelections.splice(existingIdx, 1);
+                btn.style.borderColor = 'rgba(173, 152, 85, 0.3)';
+                btn.style.color = 'var(--text-light)';
+                btn.style.background = 'rgba(20, 20, 20, 0.6)';
+                btn.querySelector('ion-icon').style.opacity = '0.2';
+                btn.querySelector('ion-icon').name = 'checkmark-circle-outline';
             } else {
-                const category = tagMap[tag] || "RefrescanteSutil";
-                scores[category]++;
+                // Select
+                if (currentSelections.length >= limit) return; // Reached limit
+                currentSelections.push({ tag, type });
+                btn.style.borderColor = 'var(--accent-gold)';
+                btn.style.color = 'var(--primary-green)';
+                btn.style.background = 'var(--accent-gold)';
+                btn.querySelector('ion-icon').style.opacity = '1';
+                btn.querySelector('ion-icon').name = 'checkmark-circle';
             }
+        }
+
+        function submitMultiple() {
+            answer(currentSelections);
+        }
+
+        function answer(selections) {
+            selections.forEach(sel => {
+                if (sel.type === 'block') {
+                    blockedTags.push(sel.tag);
+                } else if (currentQ === 0) {
+                    q1Tag = sel.tag;
+                } else if (currentQ === 3) {
+                    q4Tag = sel.tag;
+                    preferenceTags.push(sel.tag);
+                } else {
+                    preferenceTags.push(sel.tag);
+                }
+            });
 
             currentQ++;
             if (currentQ < questions.length) {
@@ -525,48 +635,81 @@
             const resultStep = document.getElementById('result-step');
             resultStep.classList.add('active');
 
-            let winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
-            const profile = profiles[winner];
+            const profileKey = tagMap[q1Tag] || "RefrescanteSutil";
+            const profile = profiles[profileKey];
 
             document.getElementById('profile-text').textContent = `"${profile.desc}"`;
             document.querySelector('.result-title').textContent = profile.title;
 
             let candidates = [];
-            let fallbackName = "Gin Tonic Clásico";
-            let fallbackDesc = "El equilibrio perfecto.";
-            let fallbackPrice = "$6000";
+            let fallbackName = "Especial al Gusto";
+            let fallbackDesc = "Tus elecciones fueron tan específicas que lograste hackear nuestra carta. ¡Acercate a la barra y decile al bartender que te prepare algo de autor con este perfil!";
+            let fallbackPrice = "-";
 
             try {
                 // Fetch the new JSON structure
                 const response = await fetch('menu.json');
                 const menuData = await response.json();
 
-                const targetKeywords = profile.keywords;
                 const validCategories = ["Cocktelería de Autor", "Tikis", "Cocktelería Clásica"];
+
+                let scoredCandidates = [];
 
                 menuData.forEach(cat => {
                     if (validCategories.includes(cat.category)) {
                         cat.items.forEach(item => {
                             if (item.tags) {
+                                // 1. Absolute rule: MUST NOT have blocked tags
                                 const isBlocked = item.tags.some(t => blockedTags.includes(t));
                                 if (isBlocked) return;
-                                
-                                const hasMatch = item.tags.some(t => targetKeywords.includes(t));
-                                if (hasMatch) candidates.push(item);
+
+                                // 2. Absolute rule: MUST have Q1 tag
+                                const hasBaseMatch = item.tags.includes(q1Tag);
+                                if (hasBaseMatch) {
+                                    // 3. Score based on Q2, Q3, Q4 preferences
+                                    let score = 0;
+                                    preferenceTags.forEach(pref => {
+                                        if (item.tags.includes(pref)) score++;
+                                    });
+                                    scoredCandidates.push({ item: item, score: score });
+                                }
                             }
                         });
                     }
                 });
+
+                let finalCandidates = [];
+
+                if (scoredCandidates.length > 0) {
+                    // Sort descending by score
+                    scoredCandidates.sort((a, b) => b.score - a.score);
+                    const topScore = scoredCandidates[0].score;
+                    // Gather all with the top score to randomly pick if there's a tie
+                    candidates = scoredCandidates.filter(c => c.score === topScore).map(c => c.item);
+                }
+
             } catch (error) {
                 console.error("Error loading menu data for quiz:", error);
             }
 
-            // Fallback if no specific matches found or fetch failed
+            // Absolute fallback if no specific matches found, fetch failed, or somehow everything is blocked
             if (candidates.length === 0) {
                 candidates = [{ name: fallbackName, desc: fallbackDesc, price: fallbackPrice }];
             }
 
+            // Check if we have a previously recommended drink in this session to avoid repeats
+            const lastRecommended = sessionStorage.getItem('lastRecommendedDrink');
+
+            // If we have multiple candidates and one of them is the one we just recommended, remove it
+            if (candidates.length > 1 && lastRecommended) {
+                candidates = candidates.filter(c => c.name !== lastRecommended);
+            }
+
             const selected = candidates[Math.floor(Math.random() * candidates.length)];
+
+            // Save this recommendation so we don't repeat it next round
+            sessionStorage.setItem('lastRecommendedDrink', selected.name);
+
             let imgSrc = `https://placehold.co/400x350/063023/AD9855?text=${encodeURIComponent(selected.name)}`;
 
             const recContainer = document.getElementById('recommendation-content');

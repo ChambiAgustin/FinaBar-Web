@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#052b22">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description"
@@ -18,13 +19,15 @@
     <meta property="og:image" content="https://fina-bar.com/images/Aperol%20Spritz.jpg">
     <!-- Reemplazar con URL real final -->
     <meta property="og:url" content="https://fina-bar.com/menu.html">
-    
+
     <!-- PWA Setup & Fonts Preload -->
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="images/icon-192.png">
-    
+
     <!-- Preload Critical Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -106,8 +109,8 @@
     </section>
 
     <!-- Spotify Floating Button -->
-    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=f89b2c9b2da74d7e" class="spotify-btn" target="_blank"
-        aria-label="Listen on Spotify">
+    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=f89b2c9b2da74d7e" class="spotify-btn"
+        target="_blank" aria-label="Listen on Spotify">
         <ion-icon name="musical-notes"></ion-icon>
         <div class="spotify-wave"></div>
         <span class="spotify-tooltip">Nuestra Playlist</span>
@@ -141,12 +144,14 @@
 
     <!-- Payment Info Banner -->
     <div class="container" style="padding-top: 40px;">
-        <div class="payment-banner">
-            <div class="payment-content">
+        <div class="payment-banner"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 15px; margin-bottom: 40px;">
+            <div class="payment-content"
+                style="display: flex; align-items: center; gap: 10px; justify-content: center;">
                 <ion-icon name="wallet-outline"></ion-icon>
                 <span>Aceptamos todos los medios de pago</span>
             </div>
-            <div class="payment-icons" style="display: flex; gap: 10px; font-size: 1.8rem;">
+            <div class="payment-icons" style="display: flex; gap: 15px; font-size: 2rem; justify-content: center;">
                 <ion-icon name="card-outline" title="Tarjetas de Crédito y Débito"></ion-icon>
                 <ion-icon name="phone-portrait-outline" title="MercadoPago y Transferencias"></ion-icon>
                 <ion-icon name="cash-outline" title="Efectivo"></ion-icon>

@@ -111,6 +111,7 @@
                 "price": "$8000",
                 "desc": "Gin Beefeater dry, cordial de lima, almíbar y Menta.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "citricos",
@@ -125,6 +126,7 @@
                 "price": "$8500",
                 "desc": "Gin Beefeater dry y vermouth dry.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "secos",
                     "fuerte"
@@ -137,6 +139,7 @@
                 "price": "$7000",
                 "desc": "Gin, almíbar simple, Jugo de limon, agua con gas.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "suave",
@@ -150,6 +153,7 @@
                 "price": "$8500",
                 "desc": "Tequila Jose Cuervo, triple sec, almibar, limon y blue curacao.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "dulces",
@@ -163,6 +167,7 @@
                 "price": "$6000",
                 "desc": "Fernet Branca y cola.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "equilibrado",
@@ -177,6 +182,7 @@
                 "price": "$8500",
                 "desc": "Gin Beefeater dry, vermut rosso y campari.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "amargo",
                     "secos",
@@ -190,6 +196,7 @@
                 "price": "$7000",
                 "desc": "Gin y tónica.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "secos",
                     "citricos",
@@ -204,6 +211,7 @@
                 "price": "$8500",
                 "desc": "Vodka, almíbar de albahaca, te Matcha y licor de pistacchio.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "equilibrado"
@@ -216,6 +224,7 @@
                 "price": "$6000",
                 "desc": "Campari, soda o jugo.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "amargo"
@@ -228,6 +237,7 @@
                 "price": "$8000",
                 "desc": "Ron, jugo de limón, almíbar simple, hojas de menta y trozos de lima.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "citricos",
@@ -242,6 +252,7 @@
                 "price": "$7000",
                 "desc": "Ron blanco, jugo naranja, granadina y limón.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "dulces",
                     "citricos",
@@ -255,6 +266,7 @@
                 "price": "$8000",
                 "desc": "Aperol, espumante y soda.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "secos",
@@ -269,6 +281,7 @@
                 "price": "$9000",
                 "desc": "Whisky Wild Turkey, vermut bianco, Fernet Chola.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "secos",
@@ -282,6 +295,7 @@
                 "price": "$6000",
                 "desc": "vermut rosso y soda.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "secos",
@@ -295,6 +309,7 @@
                 "price": "$6000",
                 "desc": "Cynar, jugo de pomelo, limon, almibar y menta.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "citricos",
@@ -309,6 +324,7 @@
                 "price": "$9000",
                 "desc": "Whisky Jim Beam, almíbar, azúcar y dash bitter.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "secos",
                     "fuerte"
@@ -321,6 +337,7 @@
                 "price": "$7500",
                 "desc": "Penicilin, soda.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "secos",
                     "equilibrado",
@@ -335,6 +352,7 @@
                 "price": "$9000",
                 "desc": "Licor Vecchio, Ginger Beer.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "equilibrado",
@@ -349,6 +367,7 @@
                 "price": "$8000",
                 "desc": "Ginebra, Amargo Obrero, Pineral, jugo de naranja.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "fuerte",
@@ -362,6 +381,7 @@
                 "price": "$8000",
                 "desc": "Gin, Campari, Punt E Mes, jugo de pomelo",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "amargo",
                     "citricos",
@@ -376,6 +396,7 @@
                 "price": "$8500",
                 "desc": "whisky escocés, limón, almíbar albúmina.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "suave",
@@ -390,6 +411,7 @@
                 "price": "$7500",
                 "desc": "Fernet, jugo de ananá, almibar.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "herbales",
                     "dulces",
@@ -405,6 +427,7 @@
                 "price": "$9000",
                 "desc": "vodka, ginger Beer, limón y almibar.",
                 "tags": [
+                    "clasico",
                     "bebida",
                     "citricos",
                     "suave",
@@ -424,6 +447,7 @@
                 "price": "$12000",
                 "desc": "Licuado de banana caramelizada y kiwi, almibar, jugo de naranja, cachaza y jugo de pomelo.",
                 "tags": [
+                    "fiesta",
                     "bebida",
                     "dulces",
                     "frutal",
@@ -438,6 +462,7 @@
                 "price": "$12000",
                 "desc": "Ron, Triple Sec, Jugo de Limón y Horchata de Almendras.",
                 "tags": [
+                    "fiesta",
                     "bebida",
                     "citricos",
                     "dulces",
@@ -453,6 +478,7 @@
                 "price": "$12000",
                 "desc": "Ron especial, horchata de almendras, Ramazzotti, almíbar, jugo de pomelo.",
                 "tags": [
+                    "fiesta",
                     "bebida",
                     "dulces",
                     "frutal",
@@ -465,6 +491,7 @@
                 "price": "$12000",
                 "desc": "Pisco en ají, pineral, jugo de pomelo, aperol, almíbar simple.",
                 "tags": [
+                    "fiesta",
                     "bebida",
                     "picante",
                     "fuerte",
