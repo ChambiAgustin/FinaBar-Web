@@ -11,7 +11,8 @@
                     "bebida",
                     "secos",
                     "fuerte",
-                    "autor"
+                    "autor",
+                    "dulces"
                 ],
                 "history": "Inspirado en los lujos del Boulevardier clásico de los años 20, con un giro frutal y sofisticado.",
                 "pairing": "Ideal para saborear junto a la Tabla de Quesos o una Provoleta."
@@ -91,7 +92,6 @@
                 "desc": "Grapa, almíbar de miel, jugo de limón y albúmina.",
                 "tags": [
                     "bebida",
-                    "dulces",
                     "citricos",
                     "amargo",
                     "fuerte",
@@ -113,7 +113,6 @@
                 "tags": [
                     "clasico",
                     "bebida",
-                    "herbales",
                     "citricos",
                     "suave",
                     "equilibrado"
@@ -239,7 +238,6 @@
                 "tags": [
                     "clasico",
                     "bebida",
-                    "herbales",
                     "citricos",
                     "suave",
                     "equilibrado"
@@ -283,7 +281,6 @@
                 "tags": [
                     "clasico",
                     "bebida",
-                    "herbales",
                     "secos",
                     "fuerte"
                 ],
@@ -297,7 +294,6 @@
                 "tags": [
                     "clasico",
                     "bebida",
-                    "herbales",
                     "secos",
                     "fuerte"
                 ],
@@ -333,50 +329,6 @@
                 "pairing": "Excelente contraste para carnes intensas como nuestro Roast Beef Sandwich o Lomo Clásico."
             },
             {
-                "name": "Penicilin Highball",
-                "price": "$7500",
-                "desc": "Penicilin, soda.",
-                "tags": [
-                    "clasico",
-                    "bebida",
-                    "secos",
-                    "equilibrado",
-                    "fuerte",
-                    "amargo"
-                ],
-                "history": "Un giro espumoso al clásico moderno Penicillin (creado en 2005), donde el ahumado del scotch es refrescado por las burbujas.",
-                "pairing": "Sus notas ahumadas encajan espectacularmente bien con una Provoleta fundida o el Roast Beef Sandwich."
-            },
-            {
-                "name": "Vecchio Highball",
-                "price": "$9000",
-                "desc": "Licor Vecchio, Ginger Beer.",
-                "tags": [
-                    "clasico",
-                    "bebida",
-                    "herbales",
-                    "equilibrado",
-                    "fuerte",
-                    "amargo"
-                ],
-                "history": "La mezcla de la complejidad herbal del Amaro y el picante de la cerveza de jengibre es la cumbre del refresco digestivo.",
-                "pairing": "Excelente elección para acompañar sabores complejos como los de la Tabla de Fiambres o nuestra provoleta."
-            },
-            {
-                "name": "Falso Jagger",
-                "price": "$8000",
-                "desc": "Ginebra, Amargo Obrero, Pineral, jugo de naranja.",
-                "tags": [
-                    "clasico",
-                    "bebida",
-                    "herbales",
-                    "fuerte",
-                    "amargo"
-                ],
-                "history": "Un homenaje a los aperitivos nacionales. Combina botánicos populares para emular el famoso licor alemán, con sello 100% argentino.",
-                "pairing": "Pedilo como un excelente bajativo de unas Empanadas de Carne o un Lomo Clásico."
-            },
-            {
                 "name": "Segundo Intento",
                 "price": "$8000",
                 "desc": "Gin, Campari, Punt E Mes, jugo de pomelo",
@@ -386,7 +338,8 @@
                     "amargo",
                     "citricos",
                     "secos",
-                    "fuerte"
+                    "fuerte",
+                    "herbales"
                 ],
                 "history": "Una variante seca y muy adulta del clásico Boulevardier. Aporta acidez y un perfil extremadamente seco al trago.",
                 "pairing": "Elegilo siempre junto a Sabores de mar como nuestras Rabas o cortes grasos como una buena Tabla de Quesos."
@@ -555,8 +508,8 @@
             },
             {
                 "name": "Empanada de Carne",
-                "price": "$2500",
-                "desc": "Salada",
+                "price": "$3500",
+                "desc": "Carne cortada a cuchillo",
                 "tags": [
                     "comida"
                 ],
@@ -610,7 +563,7 @@
         "items": [
             {
                 "name": "Tabla de Fiambres",
-                "price": "$13000",
+                "price": "$18500",
                 "desc": "Jamón crudo, jamón cocido, salamin, bondiola y escabeche de porotos.",
                 "tags": [
                     "comida",
@@ -621,7 +574,7 @@
             },
             {
                 "name": "Tabla de Quesos",
-                "price": "$11000",
+                "price": "$22000",
                 "desc": "Queso sardo, pategrás, gouda, pepato, parmesano, roquefort e higos en almibar.",
                 "tags": [
                     "comida",
@@ -633,7 +586,7 @@
             },
             {
                 "name": "Tabla de Mar",
-                "price": "$22000",
+                "price": "$25000",
                 "desc": "Rabas rebozadas en panko, langostinos al ajillo, bastones de merluza, salsa de mariscos y salsa tartara",
                 "tags": [
                     "comida",
@@ -676,7 +629,7 @@
             },
             {
                 "name": "Roast Beef Sandwich",
-                "price": "$18500",
+                "price": "$12500",
                 "desc": "Roast Beef desmechado, verduras, queso provolone gratinado, Chimichurri y mayonesa de ajo.",
                 "tags": [
                     "comida"
@@ -710,17 +663,8 @@
         "items": [
             {
                 "name": "Hamburguesa Vegana",
-                "price": "$12500",
+                "price": "$14500",
                 "desc": "Medallón de legumbres, emulsión de remolacha y rúcula con papas fritas.",
-                "tags": [
-                    "comida",
-                    "vegetariano"
-                ]
-            },
-            {
-                "name": "Falafel",
-                "price": "$7000",
-                "desc": "Croquetas de garbanzos, acompañado con hummus de remolacha.",
                 "tags": [
                     "comida",
                     "vegetariano"
@@ -734,7 +678,7 @@
         "items": [
             {
                 "name": "Tarta",
-                "price": "$14500",
+                "price": "$7000",
                 "tags": [
                     "comida",
                     "sin-tacc"
@@ -1242,7 +1186,7 @@
         "items": [
             {
                 "name": "Amstel Lager",
-                "price": "$4200",
+                "price": "$4500",
                 "tags": [
                     "bebida",
                     "cerveza"
@@ -1338,7 +1282,7 @@
             },
             {
                 "name": "Heineken Sin Alcohol",
-                "price": "$4500",
+                "price": "$4200",
                 "tags": [
                     "bebida",
                     "cerveza"
@@ -1484,7 +1428,7 @@
             },
             {
                 "name": "Villavicencio",
-                "price": "$2000",
+                "price": "$3000",
                 "tags": [
                     "bebida",
                     "sin-alcohol"
@@ -1492,7 +1436,7 @@
             },
             {
                 "name": "Villavicencio c/gas",
-                "price": "$2000",
+                "price": "$3000",
                 "tags": [
                     "bebida",
                     "sin-alcohol"
