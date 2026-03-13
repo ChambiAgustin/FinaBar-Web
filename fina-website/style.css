@@ -32,6 +32,7 @@ body {
     position: relative;
     -webkit-tap-highlight-color: transparent;
     overflow-x: visible;
+    color-scheme: light;
 }
 
 /* Base Mobile Optimization */
@@ -39,6 +40,7 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     overflow-x: visible;
+    color-scheme: light;
 }
 
 /* Neon Background Effects */

@@ -609,18 +609,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const pwaCloseBtn = document.getElementById('pwa-close');
 
     if (pwaPrompt && isHomePage) {
+        let promptShown = false;
+
         window.addEventListener('beforeinstallprompt', (e) => {
             // Prevent the mini-infobar from appearing on mobile
             e.preventDefault();
             // Stash the event so it can be triggered later.
             deferredPrompt = e;
+        });
 
-            // Show our custom UI after a short delay so it doesn't interrupt extreme quick scrolling
-            setTimeout(() => {
+        window.addEventListener('scroll', () => {
+            if (promptShown || !deferredPrompt) return;
+
+            // Calculate scroll percentage
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+            if (scrollPercentage >= 50) {
+                promptShown = true;
                 pwaPrompt.classList.remove('hidden');
                 // Small delay to allow display:block to apply before animating transform
                 setTimeout(() => pwaPrompt.classList.add('visible'), 100);
-            }, 3000);
+            }
         });
 
         pwaInstallBtn.addEventListener('click', async () => {
