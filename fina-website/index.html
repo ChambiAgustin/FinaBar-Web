@@ -43,7 +43,7 @@
 
     <!-- WhatsApp Floating Button -->
     <!-- Spotify Floating Button -->
-    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=f89b2c9b2da74d7e" class="spotify-btn"
+    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=e54cff4a1db147e0" class="spotify-btn"
         target="_blank" aria-label="Listen on Spotify">
         <ion-icon name="musical-notes"></ion-icon>
         <div class="spotify-wave"></div>
@@ -94,6 +94,12 @@
                 <a href="menu.html" class="mobile-nav-link">
                     <ion-icon name="restaurant-outline"></ion-icon>
                     <span>Carta</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="https://www.instagram.com/finacocktailbar" target="_blank" class="mobile-nav-link instagram-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <span>Instagram</span>
                 </a>
             </li>
             <li class="mobile-nav-item">
@@ -256,7 +262,7 @@
 
             <!-- Animated Reviews Section -->
             <div class="reviews-section" id="reviews">
-                <div class="google-header">
+                <a href="https://share.google/5yadzVFpcpE5knhvG" target="_blank" class="google-header" style="text-decoration: none;">
                     <div class="google-logo">
                         <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span
                             class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
@@ -265,7 +271,7 @@
                         <span class="rating-score">4.5</span>
                         <div class="stars-static">★★★★★</div>
                     </div>
-                </div>
+                </a>
 
                 <div class="reviews-carousel">
                     <div class="reviews-track" id="reviews-track">
@@ -327,6 +333,15 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered!', reg))
+                    .catch(err => console.error('SW registration failed!', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -62,6 +62,12 @@
                 </a>
             </li>
             <li class="mobile-nav-item">
+                <a href="https://www.instagram.com/finacocktailbar" target="_blank" class="mobile-nav-link instagram-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <span>Instagram</span>
+                </a>
+            </li>
+            <li class="mobile-nav-item">
                 <a href="https://wa.me/5493585142160" target="_blank" class="mobile-nav-link whatsapp-link">
                     <ion-icon name="logo-whatsapp"></ion-icon>
                     <span>WhatsApp</span>
@@ -109,7 +115,7 @@
     </section>
 
     <!-- Spotify Floating Button -->
-    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=f89b2c9b2da74d7e" class="spotify-btn"
+    <a href="https://open.spotify.com/playlist/6pD93m5NMiYT9WtZIZbHWX?si=e54cff4a1db147e0" class="spotify-btn"
         target="_blank" aria-label="Listen on Spotify">
         <ion-icon name="musical-notes"></ion-icon>
         <div class="spotify-wave"></div>
@@ -164,6 +170,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered!', reg))
+                    .catch(err => console.error('SW registration failed!', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

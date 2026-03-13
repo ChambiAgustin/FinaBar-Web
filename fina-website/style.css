@@ -312,7 +312,7 @@ a {
     margin-bottom: 60px;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .section-header.visible {
@@ -369,7 +369,7 @@ a {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .category-title.visible {
@@ -1968,6 +1968,19 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    animation: pulseQuiz 2.5s infinite;
+}
+
+@keyframes pulseQuiz {
+    0% {
+        box-shadow: 0 0 0 0 rgba(173, 152, 85, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(173, 152, 85, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(173, 152, 85, 0);
+    }
 }
 
 .quiz-fab:hover {
@@ -2148,6 +2161,14 @@ footer {
 
 .mobile-nav-link.whatsapp-link:hover {
     color: #128C7E;
+}
+
+.mobile-nav-link.instagram-link {
+    color: #E1306C;
+}
+
+.mobile-nav-link.instagram-link:hover {
+    color: #C13584;
 }
 
 /* Base Responsive Adjustments Update */

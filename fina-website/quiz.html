@@ -710,7 +710,10 @@
             // Save this recommendation so we don't repeat it next round
             sessionStorage.setItem('lastRecommendedDrink', selected.name);
 
-            let imgSrc = `https://placehold.co/400x350/063023/AD9855?text=${encodeURIComponent(selected.name)}`;
+            let defaultFallback = "images/default-cocktail.svg";
+            let imgSrc = window.imageMapping && window.imageMapping[selected.name] 
+                ? window.imageMapping[selected.name] 
+                : defaultFallback;
 
             const recContainer = document.getElementById('recommendation-content');
             recContainer.innerHTML = `
@@ -727,6 +730,15 @@
         }
     </script>
     <script src="script.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered!', reg))
+                    .catch(err => console.error('SW registration failed!', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

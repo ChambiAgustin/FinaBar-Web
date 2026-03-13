@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- RENDER MENU (Only on menu.html) ---
     const menuContainer = document.getElementById('menu-container');
 
-    const imageMapping = {
+    window.imageMapping = {
         "Aperol Spritz": "images/Aperol Spritz.jpg",
         "Branca Smash": "images/Branca Smash.jpg",
         "Candy Irish": "images/Candy Irish.jpg",
@@ -227,8 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             cat.items.forEach(item => {
                                 const categoriesWithImages = [
                                     "Cocktelería de Autor", "Tikis", "Cocktelería Clásica",
-                                    "Para Picotear", "Para Compartir", "Platos Principales",
-                                    "Platos Vegetarianos", "Platos Sin TACC", "Postres"
+                                    "Para Picotear", "Para Compartir", "Platos Principales"
                                 ];
                                 const showImage = categoriesWithImages.includes(cat.category);
                                 const cardClass = showImage ? 'menu-card' : 'menu-card compact-card';
@@ -246,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         defaultImg = 'images/default-food.svg';
                                     }
 
-                                    let imgSrc = imageMapping[item.name] || defaultImg;
+                                    let imgSrc = window.imageMapping[item.name] || defaultImg;
                                     // Added loading="lazy" and decoding="async" for heavy performance boost on mobile
                                     imageHtml = `
                                     <div class="card-image">
