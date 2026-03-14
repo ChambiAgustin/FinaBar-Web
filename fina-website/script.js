@@ -2,16 +2,16 @@
 // Promos Data
 const promosData = [
     {
-        id: "kine-promo",
-        title: "Colegio Profesional de Kinesiólogos y Fisioterapeutas",
-        image: "images/promo_kinesiologos_gb.jpg",
-        desc: "10% OFF Miércoles y Jueves. Abonando en efectivo."
-    },
-    {
         id: "aperitivos-2x1",
         title: "2x1 Aperitivos",
         image: "images/2x1_whatsapp.jpeg",
-        desc: "Miércoles y Jueves de 20 a 22hs."
+        desc: "Miércoles de 20:00 a 22:30 hs."
+    },
+    {
+        id: "gin-tonic-2x1",
+        title: "2x1 en Gin Tonic",
+        image: "images/2x1_whatsapp.jpeg",
+        desc: "Jueves de 20:00 a 22:30 hs."
     }
 ];
 

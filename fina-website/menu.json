@@ -15,7 +15,7 @@
                     "dulces"
                 ],
                 "history": "Inspirado en los lujos del Boulevardier clásico de los años 20, con un giro frutal y sofisticado.",
-                "pairing": "Ideal para saborear junto a la Tabla de Quesos o una Provoleta."
+                "pairing": "🔗 Maridaje ideal: Cheese Burguer. La estructura del bourbon limpia el paladar, ideal para acompañar el doble cheddar y bacon."
             },
             {
                 "name": "Luna de Otoño",
@@ -30,7 +30,7 @@
                     "autor"
                 ],
                 "history": "Nacido para evocar los atardeceres frescos, combinando la calidez del ron con el perfume floral del sauco.",
-                "pairing": "Excelente acompañamiento para los Tacos de pollo o unos Bastones de mozzarella."
+                "pairing": "🔗 Maridaje ideal: Empanada de Carne (cortada a cuchillo). El ron profundo y el toque floral elevan la jugosidad de la carne."
             },
             {
                 "name": "La Havana Angosta",
@@ -44,7 +44,7 @@
                     "autor"
                 ],
                 "history": "Inspirado en los vibrantes colores de los atardeceres caribeños, aportando el dulzor exacto para refrescar la noche.",
-                "pairing": "Sus tonos frutales contrastan de 10 con la intensidad salada de los Tacos de birria o las Papas con Cheddar."
+                "pairing": "🔗 Maridaje ideal: Tacos de Pollo. El dulzor del ananá abraza y suaviza la textura crocante del pollo rebozado."
             },
             {
                 "name": "Crazy Quince",
@@ -57,7 +57,7 @@
                     "autor"
                 ],
                 "history": "La mezcla audaz del membrillo destilado con cítricos crea un perfil nostálgico pero sumamente novedoso.",
-                "pairing": "Armoniza brillantemente con unas Empanadas Capresse o platos ligeros como la Ensalada Caesar."
+                "pairing": "🔗 Maridaje ideal: Papas Bravas. El gin y el membrillo logran un balance espectacular contra la emulsión de ajo asado."
             },
             {
                 "name": "Gaucho Martin Fierro",
@@ -71,7 +71,7 @@
                     "autor"
                 ],
                 "history": "Un homenaje a nuestras raíces: el amargor estimulante de la yerba mate se une a la complejidad herbal del gin y el strega.",
-                "pairing": "Perfecto para cortar la riqueza de un Lomo Clásico o unas Empanadas de Carne."
+                "pairing": "🔗 Maridaje ideal: Lomo Clásico. Las notas de la yerba mate potencian los sabores tradicionales de este clásico argentino."
             },
             {
                 "name": "Candy Irish",
@@ -84,7 +84,7 @@
                     "autor"
                 ],
                 "history": "Un acercamiento amigable y frutal al exquisito carácter del buen whisky de origen irlandés.",
-                "pairing": "Maridaje natural para la untuosidad de una Cheese Burguer o unos Tacos de pollo."
+                "pairing": "🔗 Maridaje ideal: Roast Beef Sandwich. El carácter del whisky irlandés es la pareja definitiva para la carne desmechada."
             },
             {
                 "name": "Caprichosa",
@@ -98,7 +98,7 @@
                     "autor"
                 ],
                 "history": "Una deconstrucción elegante de los licores tradicionales italianos, con una sedosidad única aportada por la albúmina.",
-                "pairing": "Ideal para acompañar las notas fuertes y asadas de nuestro Lomo Clásico o Roast Beef Sandwich."
+                "pairing": "🔗 Maridaje ideal: Tabla de Quesos. El dulzor de la miel y la grappa contrastan mágicamente con quesos intensos como el roquefort o sardo."
             }
         ]
     },
@@ -118,7 +118,7 @@
                     "equilibrado"
                 ],
                 "history": "Se rumorea que era el cóctel favorito de Al Capone, preparado por la mafia del 'South Side' de Chicago durante la Ley Seca.",
-                "pairing": "Sus notas de menta y lima limpian el paladar hermosamente tras comer unas Rabas o Tacos de pollo."
+                "pairing": "🔗 Maridaje ideal: Ensalada Mariscona. La menta y la lima realzan la frescura de los langostinos y el kanikama."
             },
             {
                 "name": "Dry Martini",
@@ -159,7 +159,7 @@
                     "frutal"
                 ],
                 "history": "Una variante vistosa de la clásica Margarita (creada en México en los 30s), cambiando el licor de naranja por el vibrante Blue Curaçao.",
-                "pairing": "La acidez del tequila y la frescura del limón cortan el picante de las Papas Bravas o los Tacos de birria."
+                "pairing": "🔗 Maridaje ideal: Empanadas Capresse. El perfil cítrico del tequila resalta la frescura del tomate asado y la albahaca."
             },
             {
                 "name": "Fernet Branca",
@@ -216,7 +216,7 @@
                     "equilibrado"
                 ],
                 "history": "Un perfil botánico moderno que fusiona la frescura verde de la albahaca con las notas tostadas del pistacho.",
-                "pairing": "Sus tonos herbales son espectaculares junto a una Ensalada Caesar o unas generosas Rabas."
+                "pairing": "🔗 Maridaje ideal: Tabla de Mar. La albahaca y el té matcha crean una sinfonía botánica perfecta para acompañar mariscos."
             },
             {
                 "name": "Garibaldi",
@@ -272,7 +272,7 @@
                     "equilibrado"
                 ],
                 "history": "De origen veneciano. El término 'spritz' nace de los soldados austro-húngaros que 'salpicaban' agua en el vino.",
-                "pairing": "El aperitivo definitivo. Ideal para abrir el apetito con una Tabla de Quesos o Tortilla Babé."
+                "pairing": "🔗 Maridaje ideal: Rabas. El ligero amargor y las burbujas son el contraste definitivo para limpiar la fritura y la salsa tártara."
             },
             {
                 "name": "White Hunky Punky",
@@ -387,7 +387,7 @@
                     "equilibrado"
                 ],
                 "history": "Nacido en 1941 para popularizar el vodka y la cerveza de jengibre en EE.UU., tradicionalmente servido en taza de cobre.",
-                "pairing": "Su toque picante y cítrico va increíble con la Hamburguesa Azul o unos Tacos de birria."
+                "pairing": "🔗 Maridaje ideal: Tortilla Babé. El picante sutil de la ginger beer corta la cremosidad de la papa y el huevo a la perfección."
             }
         ]
     },
@@ -450,7 +450,8 @@
                     "fuerte",
                     "amargo",
                     "autor"
-                ]
+                ],
+                "pairing": "🔗 Maridaje ideal: Tacos de Birria. Fuego con fuego; el pisco en ají hace una sinergia perfecta con la intensidad de la res y el parmesano."
             }
         ]
     },
