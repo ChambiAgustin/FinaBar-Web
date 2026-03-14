@@ -4,13 +4,13 @@ const promosData = [
     {
         id: "aperitivos-2x1",
         title: "2x1 Aperitivos",
-        image: "images/2x1_whatsapp.webp",
+        image: "images/2x1_whatsapp.webp", // Fallback, will be dynamic
         desc: "Miércoles de 20:00 a 22:30 hs."
     },
     {
         id: "gin-tonic-2x1",
         title: "2x1 en Gin Tonic",
-        image: "images/2x1_whatsapp.webp",
+        image: "images/Gin Tonic.webp",
         desc: "Jueves de 20:00 a 22:30 hs."
     }
 ];
@@ -40,26 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.imageMapping = {
         "Aperol Spritz": "images/Aperol Spritz.webp",
+        "Blue Margarita": "images/Blu Margarita.webp",
         "Branca Smash": "images/Branca Smash.webp",
         "Candy Irish": "images/Candy Irish.webp",
         "Caprichosa": "images/Caprichosa.webp",
         "Cheese Burguer": "images/Cheese Burguer.webp",
         "Cobá": "images/Coba.webp",
         "Crazy Quince": "images/Crazy Quince.webp",
+        "Cynar Julep": "images/Cynar Julep.webp",
         "El Cesar": "images/El Cesar.webp",
         "Empanadas Capresse": "images/Empanadas caprese.webp",
-        "Empanada de Carne": "images/Empanadas de Carne.webp",
+        "Empanada de Carne": "images/Empanada de Carne.webp",
         "Ensalada Caesar": "images/Ensalada Cesar.webp",
+        "Fernet Branca": "images/Fernet Branca.webp",
         "Gaucho Martin Fierro": "images/Gaucho Martin Fierro.webp",
+        "Gin Tonic": "images/Gin Tonic.webp",
         "Golden Boulevard": "images/Golden Boulevard.webp",
         "Hamburguesa Azul": "images/Hamburguesa Azul.webp",
         "Heineken": "images/Heineken TIrada.webp",
         "Hot Chilli": "images/Hot Chili.webp",
         "Lomo Clásico": "images/Lomo clasico.webp",
+        "Luna de Otoño": "images/Luna de otoño.webp",
+        "Moscow Mule": "images/Moscow Mule.webp",
         "Papas Bravas": "images/Papas bravas.webp",
+        "Pinky Cerebro": "images/Pinky Cerebro.webp",
         "Provoleta": "images/Provoleta.webp",
+        "Rabas": "images/Rabas.webp",
         "Ramazzotti": "images/Ramazoti Spritz.webp",
-        "Roast Beef Sandwich": "images/Roast Beef.webp",
+        "Roast Beef Sandwich": "images/Roast Beef Sandwich.webp",
         "Secreto del Eden": "images/Secreto de Eden.webp",
         "Segundo Intento": "images/Segundo Intento.webp",
         "Tabla de Fiambres": "images/Tabla de Fiambres.webp",
@@ -67,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Tabla de Quesos": "images/Tabla de quesos.webp",
         "Tacos de birria": "images/Tacos de birria.webp",
         "Tacos de pollo": "images/Tacos de pollo.webp",
+        "Tom Collins": "images/Tom Collins.webp",
         "Tortilla Babé": "images/Tortilla Babe.webp"
     };
 
@@ -80,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let promosHtml = '';
         promosData.forEach(promo => {
             promosHtml += `
-                <div class="promo-card">
+                <div class="promo-card" id="${promo.id}">
                     <img src="${promo.image}" alt="${promo.title}" class="promo-img" loading="lazy" decoding="async">
                     <div class="promo-overlay">
                         <h3>${promo.title}</h3>
@@ -262,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                                 <span class="card-title" style="color:var(--text-light); text-align:right;">${item.price}</span>
                                             </div>
                                             ${item.desc ? `<p class="card-desc">${item.desc}</p>` : ''}
-                                            ${item.pairing ? `<p class="card-pairing">${item.pairing}</p>` : ''}
                                         </div>
                                     </div>
                                 `;
@@ -675,6 +683,39 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+
+    // --- PROMO DYNAMIC ANIMATIONS ---
+    function initPromoAnimations() {
+        const aperolImgs = [
+            "images/Aperol Spritz.webp",
+            "images/Branca Smash.webp",
+            "images/Ramazoti Spritz.webp"
+        ];
+        
+        let currentIndex = 0;
+        const aperitivosCard = document.querySelector('.promo-card[id="aperitivos-2x1"]');
+        if (!aperitivosCard) return;
+
+        const imgElement = aperitivosCard.querySelector('.promo-img');
+        if (!imgElement) return;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % aperolImgs.length;
+            
+            // Fade out
+            imgElement.style.opacity = '0.3';
+            
+            setTimeout(() => {
+                imgElement.src = aperolImgs[currentIndex];
+                // Fade in
+                imgElement.style.opacity = '1';
+            }, 600); // Wait for fade out duration
+        }, 3000);
+    }
+
+    if (promoContainer) {
+        setTimeout(initPromoAnimations, 1000);
     }
 
 });
