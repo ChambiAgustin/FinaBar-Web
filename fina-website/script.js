@@ -4,13 +4,13 @@ const promosData = [
     {
         id: "aperitivos-2x1",
         title: "2x1 Aperitivos",
-        image: "images/2x1_whatsapp.jpeg",
+        image: "images/2x1_whatsapp.webp",
         desc: "Miércoles de 20:00 a 22:30 hs."
     },
     {
         id: "gin-tonic-2x1",
         title: "2x1 en Gin Tonic",
-        image: "images/2x1_whatsapp.jpeg",
+        image: "images/2x1_whatsapp.webp",
         desc: "Jueves de 20:00 a 22:30 hs."
     }
 ];
@@ -39,35 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuContainer = document.getElementById('menu-container');
 
     window.imageMapping = {
-        "Aperol Spritz": "images/Aperol Spritz.jpg",
-        "Branca Smash": "images/Branca Smash.jpg",
-        "Candy Irish": "images/Candy Irish.jpg",
-        "Caprichosa": "images/Caprichosa.jpg",
-        "Cheese Burguer": "images/Cheese Burguer.jpg",
-        "Cobá": "images/Coba.jpg",
-        "Crazy Quince": "images/Crazy Quince.jpg",
-        "El Cesar": "images/El Cesar.jpg",
-        "Empanadas Capresse": "images/Empanadas caprese.jpg",
-        "Empanada de Carne": "images/Empanadas de Carne.jpg",
-        "Ensalada Caesar": "images/Ensalada Cesar.jpg",
-        "Gaucho Martin Fierro": "images/Gaucho Martin Fierro.jpg",
-        "Golden Boulevard": "images/Golden Boulevard.jpg",
-        "Hamburguesa Azul": "images/Hamburguesa Azul.jpg",
-        "Heineken": "images/Heineken TIrada.jpg",
-        "Hot Chilli": "images/Hot Chili.jpg",
-        "Lomo Clásico": "images/Lomo clasico.JPG",
-        "Papas Bravas": "images/Papas bravas.jpg",
-        "Provoleta": "images/Provoleta.jpg",
-        "Ramazzotti": "images/Ramazoti Spritz.jpg",
-        "Roast Beef Sandwich": "images/Roast Beef.jpg",
-        "Secreto del Eden": "images/Secreto de Eden.jpg",
-        "Segundo Intento": "images/Segundo Intento.jpg",
-        "Tabla de Fiambres": "images/Tabla de Fiambres.jpg",
-        "Tabla de Mar": "images/Tabla de Mar.jpg",
-        "Tabla de Quesos": "images/Tabla de quesos.jpg",
-        "Tacos de birria": "images/Tacos de birria.jpg",
-        "Tacos de pollo": "images/Tacos de pollo.jpg",
-        "Tortilla Babé": "images/Tortilla Babe.jpg"
+        "Aperol Spritz": "images/Aperol Spritz.webp",
+        "Branca Smash": "images/Branca Smash.webp",
+        "Candy Irish": "images/Candy Irish.webp",
+        "Caprichosa": "images/Caprichosa.webp",
+        "Cheese Burguer": "images/Cheese Burguer.webp",
+        "Cobá": "images/Coba.webp",
+        "Crazy Quince": "images/Crazy Quince.webp",
+        "El Cesar": "images/El Cesar.webp",
+        "Empanadas Capresse": "images/Empanadas caprese.webp",
+        "Empanada de Carne": "images/Empanadas de Carne.webp",
+        "Ensalada Caesar": "images/Ensalada Cesar.webp",
+        "Gaucho Martin Fierro": "images/Gaucho Martin Fierro.webp",
+        "Golden Boulevard": "images/Golden Boulevard.webp",
+        "Hamburguesa Azul": "images/Hamburguesa Azul.webp",
+        "Heineken": "images/Heineken TIrada.webp",
+        "Hot Chilli": "images/Hot Chili.webp",
+        "Lomo Clásico": "images/Lomo clasico.webp",
+        "Papas Bravas": "images/Papas bravas.webp",
+        "Provoleta": "images/Provoleta.webp",
+        "Ramazzotti": "images/Ramazoti Spritz.webp",
+        "Roast Beef Sandwich": "images/Roast Beef.webp",
+        "Secreto del Eden": "images/Secreto de Eden.webp",
+        "Segundo Intento": "images/Segundo Intento.webp",
+        "Tabla de Fiambres": "images/Tabla de Fiambres.webp",
+        "Tabla de Mar": "images/Tabla de Mar.webp",
+        "Tabla de Quesos": "images/Tabla de quesos.webp",
+        "Tacos de birria": "images/Tacos de birria.webp",
+        "Tacos de pollo": "images/Tacos de pollo.webp",
+        "Tortilla Babé": "images/Tortilla Babe.webp"
     };
 
     // --- RENDER PROMOS (On any page with #promo-container) ---

@@ -8,14 +8,14 @@
   "theme_color": "#052b22",
   "icons": [
     {
-      "src": "images/Logo Fina.jpeg",
+      "src": "images/Logo Fina.webp",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/webp"
     },
     {
-      "src": "images/Logo Fina.jpeg",
+      "src": "images/Logo Fina.webp",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/webp"
     }
   ]
 }
