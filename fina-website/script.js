@@ -262,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                                 <span class="card-title" style="color:var(--text-light); text-align:right;">${item.price}</span>
                                             </div>
                                             ${item.desc ? `<p class="card-desc">${item.desc}</p>` : ''}
+                                            ${item.pairing ? `<p class="card-pairing">${item.pairing}</p>` : ''}
                                         </div>
                                     </div>
                                 `;

@@ -486,7 +486,7 @@
                     "tapeo",
                     "vegetariano"
                 ],
-                "pairing": "Acompáñalas con una refrescante Blue Margarita o un Gin Tonic clásico."
+                "pairing": "🔗 Maridaje ideal: Crazy Quince. El gin y la dulzura del membrillo logran un balance espectacular contra la emulsión de ajo asado."
             },
             {
                 "name": "Papas con Cheddar",
@@ -504,7 +504,7 @@
                     "comida",
                     "vegetariano"
                 ],
-                "pairing": "El maridaje herbal ideal para un Mojito o nuestro Crazy Quince."
+                "pairing": "🔗 Maridaje ideal: Blue Margarita. El perfil cítrico del tequila y el limón realzan la frescura del tomate asado y la albahaca."
             },
             {
                 "name": "Empanada de Carne",
@@ -513,7 +513,7 @@
                 "tags": [
                     "comida"
                 ],
-                "pairing": "La dupla perfecta del Fernet Branca o el Gaucho Martin Fierro."
+                "pairing": "🔗 Maridaje ideal: Luna de Otoño. Las notas profundas del ron y el toque floral del sauco acompañan la jugosidad tradicional de la carne."
             },
             {
                 "name": "Provoleta",
@@ -523,7 +523,7 @@
                     "tapeo",
                     "sin-tacc"
                 ],
-                "pairing": "Funde de maravilla con un Golden Boulevard o un fuerte Negroni."
+                "pairing": "🔗 Maridaje ideal: Cynar Julep. Las notas herbáceas y amargas del alcaucil cortan de manera impecable la grasa del queso fundido a la parrilla."
             },
             {
                 "name": "Rabas",
@@ -533,7 +533,7 @@
                     "comida",
                     "tapeo"
                 ],
-                "pairing": "Con un Gin Tonic o un Southside, el contraste es imbatible."
+                "pairing": "🔗 Maridaje ideal: Aperol Spritz. Las burbujas y el ligero amargor cítrico son el contraste definitivo para la fritura y la salsa tártara."
             },
             {
                 "name": "Tacos de birria",
@@ -543,7 +543,7 @@
                     "comida",
                     "tapeo"
                 ],
-                "pairing": "Llevan gran intensidad; rebájalos con un Moscow Mule o una Blue Margarita."
+                "pairing": "🔗 Maridaje ideal: Hot Chilli. Fuego con fuego. La intensidad de la res y el parmesano explotan junto a las notas del pisco en ají y el Pineral."
             },
             {
                 "name": "Tacos de pollo",
@@ -553,7 +553,7 @@
                     "comida",
                     "tapeo"
                 ],
-                "pairing": "Armonizan perfectamente con la frescura del Mojito o un Luna de Otoño."
+                "pairing": "🔗 Maridaje ideal: La Havana Angosta. El dulzor tropical del ananá y el ron abrazan y suavizan la textura crocante del pollo rebozado."
             }
         ]
     },
@@ -582,7 +582,7 @@
                     "sin-tacc",
                     "vegetariano"
                 ],
-                "pairing": "Potenciá tus quesos con un Dry Martini, o cortá la grasa con un fresco Aperol Spritz."
+                "pairing": "🔗 Maridaje ideal: Caprichosa. La memoria de viñedo de la grappa y el dulzor de la miel contrastan mágicamente con el roquefort y el queso sardo."
             },
             {
                 "name": "Tabla de Mar",
@@ -592,7 +592,7 @@
                     "comida",
                     "tapeo"
                 ],
-                "pairing": "Maridaje natural para los botánicos secos de un Gin Tonic o un Dry Martini."
+                "pairing": "🔗 Maridaje ideal: Secreto del Eden. La albahaca y el té matcha crean una sinfonía botánica que refresca y acompaña la variedad de mariscos."
             }
         ]
     },
@@ -607,7 +607,7 @@
                 "tags": [
                     "comida"
                 ],
-                "pairing": "Pide a gritos una Heineken Tirada o el dulzor de nuestro Candy Irish."
+                "pairing": "🔗 Maridaje ideal: Golden Boulevard. La robustez del bourbon y el vermut limpian el paladar tras cada bocado de doble cheddar y bacon."
             },
             {
                 "name": "Hamburguesa Azul",
@@ -616,7 +616,7 @@
                 "tags": [
                     "comida"
                 ],
-                "pairing": "Su queso azul empata majestuosamente con un Moscow Mule cítrico."
+                "pairing": "🔗 Maridaje ideal: Negroni. El amargor clásico del Campari y la botánica del gin equilibran a la perfección la intensidad del queso azul."
             },
             {
                 "name": "Lomo Clásico",
@@ -625,7 +625,7 @@
                 "tags": [
                     "comida"
                 ],
-                "pairing": "Un clásico necesita otro: Old Fashioned o un gran vaso de Fernet Branca."
+                "pairing": "🔗 Maridaje ideal: Gaucho Martin Fierro. Un guiño a la tradición; las notas del cold brew de yerba mate elevan los sabores de este clásico argentino."
             },
             {
                 "name": "Roast Beef Sandwich",
@@ -634,7 +634,7 @@
                 "tags": [
                     "comida"
                 ],
-                "pairing": "El compañero ideal de un Caprichosa o un buen Fernet bien servido."
+                "pairing": "🔗 Maridaje ideal: Candy Irish. La carne desmechada encuentra su pareja perfecta en la estructura del whisky irlandés y la frescura del pomelo."
             },
             {
                 "name": "Ensalada Caesar",
@@ -653,7 +653,8 @@
                 "tags": [
                     "comida",
                     "sin-tacc"
-                ]
+                ],
+                "pairing": "🔗 Maridaje ideal: Southside. La frescura inigualable de la menta y la lima realzan los sabores delicados de los langostinos y el kanikama."
             }
         ]
     },
