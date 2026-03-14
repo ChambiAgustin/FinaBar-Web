@@ -711,18 +711,21 @@
             // Save this recommendation so we don't repeat it next round
             sessionStorage.setItem('lastRecommendedDrink', selected.name);
 
-            let defaultFallback = "images/default-cocktail.svg";
-            let imgSrc = window.imageMapping && window.imageMapping[selected.name] 
-                ? window.imageMapping[selected.name] 
-                : defaultFallback;
+            // Path logic: Prioritize imageMapping (from script.js), fallback to direct local path, then default SVG
+            const defaultFallback = "images/default-cocktail.svg";
+            let imgSrc = defaultFallback;
 
-            // Final safety check: ensure the image actually exists or use default
-            // In a real environment, we'd check if it 404s, but here we trust imageMapping.
+            if (window.imageMapping && window.imageMapping[selected.name]) {
+                imgSrc = window.imageMapping[selected.name];
+            } else if (selected.name !== fallbackName) {
+                // Try direct match if mapping missing (e.g. "Negroni.webp")
+                imgSrc = `images/${selected.name}.webp`;
+            }
 
             const recContainer = document.getElementById('recommendation-content');
             recContainer.innerHTML = `
                 <div class="recommended-card">
-                    <img src="${imgSrc}" alt="${selected.name}">
+                    <img src="${imgSrc}" alt="${selected.name}" onerror="this.src='${defaultFallback}'">
                     <div class="recommended-info">
                         <h3 class="drink-name">${selected.name}</h3>
                         <div class="drink-separator"></div>
